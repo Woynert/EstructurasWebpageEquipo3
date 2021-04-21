@@ -1,0 +1,7 @@
+Los árboles n-arios son aquellos árboles donde el #número máximo de hijos por nodo es de N#, viendo dos árboles con grado 2 y grado 3, estos dos arboles también los podemos definir como Árbol n-ario con      n = 2 y n = 3 respectivamente.
+
+
+
+
+http://zomwi.blogspot.com/2012/05/convertir-un-arbol-n-ario-binario.html
+

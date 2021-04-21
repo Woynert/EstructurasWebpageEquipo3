@@ -1,0 +1,5 @@
+Se refiere al #número mayor de hijos que tiene alguno de los nodos# del Árbol y esta limitado por el Orden, ya que este indica el número máximo de hijos que puede tener un nodo.
+
+Se calcula contando de forma recursiva el número de hijos de cada sub-árbol hijo y el numero de hijos del nodo actual para tomar el mayor, esta operación se hace de forma recursiva para recorrer todo el árbol
+
+#grado = max(contarHijos(hijo1),contarHijos(hijo2),contarHijos(hijoN), contarHijos(this))#

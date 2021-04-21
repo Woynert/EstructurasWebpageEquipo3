@@ -1,0 +1,5 @@
+Esta estructura se caracteriza por que cada nodo solo puede tener #máximo 2 hijos#, dicho de otra manera es un Árbol n-ario de Grado 2.
+
+#Árbol binario lleno:# Es aquel que el que todos los nodos tiene cero o 2 hijos con excepción de la Raíz.
+
+#Árbol binario perfecto:# Es un Árbol lleno en donde todos las Hojas están en el mismo Nivel.

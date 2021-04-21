@@ -1,0 +1,3 @@
+Una queue o cola, soporta la recuperación ordenada de datos #first-in, first-out (FIFO)#, es decir, el primer dato en entrar es el primer dato en salir. Sólo se tiene acceso al final de la lista para meter elementos y al principio de esta para sacarlos.
+
+

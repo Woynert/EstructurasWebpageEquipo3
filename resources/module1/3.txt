@@ -1,0 +1,6 @@
+#-# Al tener un espacio contiguo en memoria cada index de cada elemento del array apunta directamente a una dirección de memoria, de esta forma se puede acceder arbitrariamente a los datos de forma instantánea puesto que se sabe la dirección de memoria exacta. Esto deriva en un acceso de tiempo constante dado por los index.
+
+#-# Los arrays son puramente datos lo que significa que no es necesario desperdiciar espacio en memoria almacenando información extra que ayude a la localización de sus elementos como es el caso de las estructuras enlazadas, los arrays tienen eficiencia de espacio.
+
+#-# Localidad de memoria, es común que en la programación los datos de una estructura sean iterados (o recorridos) y los arrays son buenos para esto ya que exhiben excelente  localización de memoria, permitiendo aprovechar la alta velocidad de la caché en  computadoras modernas.
+

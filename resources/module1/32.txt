@@ -1,0 +1,38 @@
+[1]  The  GNOME  Foundation,  ”Estructuras  de  datos:   listas  enlazadas,  pi-las  y  colas.”,  Calcifer.org. [Online].  Available:https://calcifer.org/documentos/\librognome/glib-lists-queues.html.   [Accessed:04-Feb- 2021]
+
+[2]  UPC,VIColasdeprioridad.upc,2021[Online].Available:https://www.cs.upc.edu/~ps/downloads/matdoc/transparencias/ps/ps_VI_heaps.pdf. [Accessed:  04- Feb- 2021]
+
+[3]  Fundaci ́on  Wikimedia,  Inc,  ”Lista  enlazada”,  Es.wikipedia.org.  [Online].Available:https://es.wikipedia.org/wiki/Lista_enlazada##Listas_enlazadas_circulares. [Accessed:  04- Feb- 2021]
+
+[4]  S.  Lipschutz,   GRAFOS.  INSTITUTO  TECNOL ́OGICO  DE  NUEVOLAREDO[Online].Available:http://www.itnuevolaredo.edu.mx/takeyas/Apuntes/Estructura%20de%20Datos/Apuntes/grafos/Apuntes_Grafos.pdf. 
+[Accessed:  04- Feb- 2021]
+
+[5]  Fundaci ́on  Wikimedia,  Inc,  ” ́Arbol  binario”,  Es.wikipedia.org.  [Online].Available:https://es.wikipedia.org/wiki/%C3%81rbol_binario. [Ac-cessed:  04- Feb- 2021]
+
+[6]  FCEIA, ”Estructura de Datos :  Grafos - Fundamentos”, Fceia.unr.edu.ar.[Online].    Available:https://www.fceia.unr.edu.ar/estruc/2005/graffund.htm. [Accessed:  04- Feb- 2021]
+
+[7]  DECSAI,  ”ARBOLES-B”,  Decsai.ugr.es.  [Online].  Available:https://decsai.ugr.es/~jfv/ed1/tedi/cdrom/docs/arb_B.htm.  [Accessed:   04-Feb- 2021]
+
+[8]  S.   Gurin, ́Arboles   AVL.   Sebasti ́an   Gurin,    2004   [Online].   Avail-able:http://www.ibiblio.org/pub/Linux/docs/LuCaS/Tutoriales/doc-programacion-arboles-avl/avl-trees.pdf.  [Accessed:    04-  Feb-2021]
+
+[9]  J.   Porto   and   A.   Gardey,    ”Definici ́on   de   nodo   —   Definicion.de”,Definici ́on.de.  [Online].  Available: https://definicion.de/nodo/.  [Accessed:  05- Feb- 2021]
+
+[10]  K.  Stein,  ”Implementaci ́on  incremental  para  data  warehouse•gestiopo-lis”,   gestiopolis.  [Online].  Available:
+https://www.gestiopolis.com/implementacion-incremental-para-data-warehouse/.  [Accessed:   05-Feb- 2021]
+
+[11]  M.Sena,”EstructurasdeDatos”,Medium,2019.[On-line].Available:https://medium.com/techwomenc/estructuras-de-
+datos-a29062de5483##:~:text=Estructuras%20de%20Datos.%20Una%20%E2%80%9Cestructura%20de%20datos%E2%
+80%9D%20es,que%20los%20valores%20van%20a%20ser%20almacenados,%http://www.umainclass.com/2016/12/estructuras-de-datos-matrices.html. [Accessed:  04- Mar- 2021]
+
+[12]  UmainClass,”EstructurasdeDatos:Matrices”,UmainClass,2016.[Online].Available:http://www.umainclass.com/2016/12/
+estructuras-de-datos-matrices.html##:~:text=Si%20bien%20las%20matrices%20tienen%20un%20origen%20en,par%20de%20%C3%ADndices%20
+(la%20fila%20y%20la%20columna).   [Accessed:04-   Mar-2021]
+
+[13]  NGuerrero,”LaslistascircularesenC)”,ProgramaEnLinea,2017.[Online].Available:https://www.programaenlinea.net/las-listas-circulares-c/##:~:text=La%20lista%20circular%20es%20una%20especie%20de%20lista,dentro%20de%20la%20lista:%20esta%20no%20tiene%20fin. [Accessed:  04- Mar- 2021]
+
+[14]  O.    Blancarte,”Estructura    de    datos    - ́Arboles    -    Oscar    Blan-carte   -   Software   Architecture”,
+Software   Architecture,    2014.   [Online].  Available:https://www.oscarblancarteblog.com/2014/08/22/estructura-
+de-datos-arboles/. [Accessed:  04- Mar- 2021]
+
+[15]  R.  Rodríguez  Sabio  and  F.  Barrera  Gómez,  ”3.5.  Estructuras  dinámicasno  lineales  —  Programación
+  avanzada:    Estructuras  de  datos  y  fun-ciones”, Agrega.juntadeandalucia.es. [Online]. Available:http://agrega.juntadeandalucia.es/repositorio/02122016/a5/es-an_2016120212_9131705/35_estructuras_dinmicas_no_lineales.html##:~:text=Un%20grafo%20es%20una%20estructura%20de%20datos%20din%C3%A1mica,de%20arcos%20pueden%20estar%20orientados%20o%20no%20estarlo.[Accessed:  05- Mar- 2021]

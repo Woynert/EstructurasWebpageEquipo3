@@ -1,0 +1,1 @@
+Las estructuras enlazadas son #dadas por pointers o punteros#, que como su nombre lo indica apuntan a una dirección de memoria donde se encuentra ubicado un valor. Los pointers son los encargados de mantener los “enlaces” entre valores de modo que es posible tener una secuencia de valores todos enlazados por pointers.

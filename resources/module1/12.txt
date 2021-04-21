@@ -1,0 +1,1 @@
+Es la estructura de datos mas utilizada, pero también una de las mas complejas,se caracterizan por almacenar sus nodos en forma jerárquica y no en forma lineal.

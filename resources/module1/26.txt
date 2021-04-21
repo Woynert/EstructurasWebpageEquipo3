@@ -1,0 +1,3 @@
+Se conoce como Sub-Árbol a todo #Árbol generado a partir de una sección determinada del Árbol#, Por lo que podemos decir que un Árbol es un nodo Raíz con N Sub-Árboles.
+
+Existen escenarios donde se puede sacar un Sub-Árboles del Árbol para procesarlo de forma separada, de esta forma el Sub-Árboles pasa a ser un Árbol independiente, También se puede eliminar Sub-Árboles completos, agregarlos,entre otras operaciones.

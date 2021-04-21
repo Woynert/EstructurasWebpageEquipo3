@@ -1,0 +1,5 @@
+#-# Las estructuras contiguamente asignadas están compuestas de #bloques de memoria únicos#, e incluyen a los arrays, matrices, heaps, y hash tables.
+
+#-# Las estructuras enlazadas están compuestas de distintos #fragmentos de memoria unidos por punteros#, e incluyen a los listas, arboles, y grafos.
+
+#-# Los contenedores son estructuras que permiten almacenar y recuperar datos en #un orden determinado# sin importar su contenido, en esta se incluyen los pilas y colas.

@@ -1,0 +1,1 @@
+Son aquellas en que se realiza el viaje por todo el árbol #sin tener una pista de donde pueda estar el dato# deseado. Este tipo de búsquedas también se conocen como búsquedas a ciegas.

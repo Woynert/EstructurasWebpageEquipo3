@@ -1,0 +1,19 @@
+#Instrucciones#
+Importe un archivo .java
+Presione el botón de generar
+
+#Uso#
+Al generar el diagrama a partir del codigo, el programa detectará los elementos que componen la estructura de la clase y lo mostrará en forma de grafo en la pantalla.
+Cada nodo tiene un color que representa su signficado.
+
+#Colores#
+- Amarillo: Clase
+- Verde: Constructor
+- Azul: Metodo
+- Rojo: Variable o argumento
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+Se hace referencia a #cada generación dentro del árbol#. Por ejemplo, cuando a un nodo hoja le agregamos un hijo, el nodo hoja pasa a ser un nodo rama pero además el árbol crece una generación por lo que el Árbol tiene un nivel mas.Cada generación tiene un número de Nivel distinto que las demás generaciones.
+
+- Un árbol vacío tiene 0 niveles
+
+- El nivel de la Raíz es 1
+
+- El nivel de cada nodo se calculado contando cuantos nodos existen sobre el, hasta llegar a la raíz + 1, y de forma inversa también se podría, contar cuantos nodos existes desde la raíz hasta el nodo buscado + 1.

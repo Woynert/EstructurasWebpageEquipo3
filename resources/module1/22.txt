@@ -1,0 +1,3 @@
+Se le llama altura al número #máximo de niveles de un Árbol#.Es calculado mediante recursividad tomando el nivel mas grande de los dos sub-árboles de forma recursiva de la siguiente manera:
+
+#altura = max(altura(hijo1), altura(hijo2),altura(hijoN)) + 1#

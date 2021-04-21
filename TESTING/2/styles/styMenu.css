@@ -1,0 +1,120 @@
+:root{
+   --menuWidth: 20%;
+
+   --contentWidth: 80%;
+   --border: 20px;
+}
+
+
+body{
+   margin: 0 !important; 
+   padding: 0 !important;
+
+   background-color: black;
+}
+
+.menu{
+   position: fixed;
+   left: 0px;
+   top: 0px;
+
+   width: var(--menuWidth);
+   height: 100%;
+
+   background-color: red;
+}
+
+
+.header{
+
+   -moz-box-sizing: border-box; 
+   -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+
+   /* dinamyc resizing support */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   position: fixed;
+   left: 0px;
+   top: 0px;
+
+   width: 80%;
+   height: 10%;
+
+   margin-left: var(--menuWidth);
+
+   padding: var(--border) 0px 8px 0px;
+
+   background-color: black;
+}
+
+.footer{
+
+   -moz-box-sizing: border-box; 
+   -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+
+   /* dinamyc resizing support */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   position: fixed;
+   left: 0px;
+   bottom: 0px;
+
+   width: 80%;
+   height: 10%;
+
+   margin-left: var(--menuWidth);
+
+   padding: 8px 0px var(--border) 0px;
+
+   background-color: black;
+}
+
+.headerChild{
+   
+   -moz-box-sizing: border-box; 
+   -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+
+   width: var(--contentWidth);
+   height: 100%;
+
+   background-color: greenyellow;
+}
+
+.content{
+
+   /* dinamyc resizing support */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   /*fix children's top/bottom margin not working*/
+   /*padding: 1px;*/
+
+   margin-left: var(--menuWidth);
+   margin-top: 10%;
+
+   width: 80%;
+
+   /*background-color: white;*/
+}
+
+.contentChild{
+   -moz-box-sizing: border-box; 
+   -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+
+
+   width: var(--contentWidth);
+
+   padding: 10px;
+   margin: 0px var(--border) 0px var(--border);
+
+   background-color: gainsboro;
+}

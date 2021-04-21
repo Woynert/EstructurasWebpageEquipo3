@@ -1,0 +1,2 @@
+Son una colección de elementos donde cada elemento tiene #asociado un valor de ordenación denominado prioridad#.Se caracterizan por admitir inserciones de nuevos elementos, además de la consulta y la eliminación de elementos de menor prioridad.
+

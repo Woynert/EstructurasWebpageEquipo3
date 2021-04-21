@@ -1,0 +1,35 @@
+
+<html>
+<head>
+	<style>
+	#editor {
+    	position: absolute;
+    	width: 500px;
+    	height: 400px;
+	}
+	</style>
+	
+	<script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/mode-java.js" type="text/javascript" charset="utf-8"></script>
+	
+</head>
+<body>
+	<div id="editor">
+	//my comment
+	int hey = 20;
+	</div>
+	
+	<script>
+    	var editor = ace.edit("editor");
+    	
+    	//set theme
+		editor.setTheme("ace/theme/twilight"); 
+		
+		//set language
+		var JavaScriptMode = ace.require("ace/mode/java").Mode;
+		editor.session.setMode(new JavaScriptMode());
+	</script>
+    
+</body>
+</html>

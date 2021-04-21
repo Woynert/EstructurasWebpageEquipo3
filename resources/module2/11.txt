@@ -1,0 +1,5 @@
+En una lista enlazada doblemente circular, #cada nodo tiene dos enlaces#, similares a los de la lista doblemente enlazada, excepto que #el enlace anterior del primer nodo apunta al último# y #el enlace siguiente del último nodo, apunta al primero#. Como en una lista doblemente enlazada, las inserciones y eliminaciones pueden ser hechas desde cualquier punto con acceso a algún nodo cercano. Aunque estructuralmente una lista circular doblemente enlazada no tiene ni principio ni fin, un puntero de acceso externo puede establecer el nodo apuntado que está en la cabeza o al nodo cola, y así mantener el orden tan bien como en una lista doblemente enlazada.
+
+Una lista doble circular es una estructura donde el último elemento tiene como referencia siguiente al primer elemento y la referencia al anterior del primer elemento de la lista también es el último. Cada elemento esta doblemente enlazado.
+
+

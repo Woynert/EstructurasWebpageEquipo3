@@ -1,0 +1,7 @@
+Es una estructura de datos dinámico lineal pero, a diferencia de la lista sencillamente enlazada, cada nodo de la lista doblemente enlazada #contiene dos punteros#, de forma que uno apunta al #siguiente nodo# y el otro al #predecesor#. Esta característica, permite que se pueda recorrer la lista en ambos sentidos, cosa que no es posible en las listas simples.
+
+
+
+
+
+

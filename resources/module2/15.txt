@@ -1,0 +1,8 @@
+Un grafo es una estructura de datos dinámica muy similar a los árboles #formado por un conjunto de nodos y otro conjunto de arcos#. Cada arco agrupa a dos nodos que pueden ser el mismo. Cada arco puede tener peso, coste o distancia. Además de arcos pueden estar orientados o no estarlo. En caso de estar orientados se representan mediante una flecha, en caso contrario se representan por un segmento.
+
+Un grafo se puede recorrer igual que un árbol, bien por profundidad o bien por amplitud.
+
+#Arcos:# relación binaria entre nodos.
+
+
+https://oskasuki.blogspot.com/2011/06/grafo_17.html

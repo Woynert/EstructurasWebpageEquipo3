@@ -1,0 +1,1 @@
+Se recorre primero la raíz, luego se recorren los otros nodos ordenados por el nivel al que pertenecen en orden de Izquierda a derecha. Este tipo de búsqueda se caracteriza por que la búsqueda se hace nivel por nivel y de izquierda a derecha.

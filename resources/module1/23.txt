@@ -1,0 +1,5 @@
+Se conoce como peso al #número de nodos que tiene un Árbol#. Este factor es importante por que da una idea del tamaño del árbol y el tamaño en memoria que nos puede ocupar en tiempo de ejecución (Complejidad Espacial en análisis de algoritmos).
+
+El peso se puede calcular mediante cualquier tipo de recorrido el cual valla contando los nodo a medida que avanza sobre la estructura. El peso es un árbol es igual a la suma del peso de los sub-árboles hijos + 1.
+
+#peso = peso(hijo1) + peso(hijo2) + peso(hijoN)+ 1#

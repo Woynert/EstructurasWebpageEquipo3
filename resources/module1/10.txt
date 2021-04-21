@@ -1,0 +1,7 @@
+La lista circular es una especie de lista enlazada simple, pero que posee una característica adicional para el desplazamiento dentro de la lista: esta #no tiene fin#.
+
+Para que la lista sea sin fin, el puntero siguiente del #último elemento apuntará hacia el primer elemento# de la lista en lugar de apuntar al valor NULL, como hemos visto en el caso de listas enlazadas simples o doblemente enlazadas.
+
+En las listas circulares, nunca se llega a una posición en la que ya no sea posible desplazarse. Cuando se llegue al último elemento, el desplazamiento volverá a comenzar desde el primer elemento.
+
+https://programacionfacilestructuradedatos.blogspot.com/p/listas-circulares-en-java.html

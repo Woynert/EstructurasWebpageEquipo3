@@ -1,0 +1,2 @@
+Si es un array es fijo no se puede ajustar su tamaño a la mitad de la ejecución de un programa, esto se puede solucionar creando un array dinámico, crear un array lo suficientemente grande para almacenar los datos, pero esto deriva en un desperdicio de memoria totalmente innecesario o también se puede crear un nuevo array, doblar el tamaño de éste cada vez que se necesite crecer y copiar los datos del array anterior al nuevo array
+

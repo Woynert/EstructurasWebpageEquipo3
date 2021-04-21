@@ -1,0 +1,2 @@
+Son estructuras de datos que permiten #organizar la información en filas y columnas#. Cada elemento de una matriz puede ser accedido por un par de índices (la fila y la columna). Al igual que en los arrays, los elementos de una matriz deben ser todos del mismo tipo de datos.
+

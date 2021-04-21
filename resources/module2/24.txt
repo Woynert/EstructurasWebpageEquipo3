@@ -1,0 +1,39 @@
+#Para comenzar#, creamos la clase #Nodo# con sus respectivos metodos para su manejo.
+
+#Nodo#
+
+El nodo tiene dos atributos, los cuales son una variable Object llamada dato y una variable Nodo llamada next, con sus getters y setters.
+
+<>
+public class Nodo 
+{
+ private Object dato;
+ private Nodo next;
+ 
+ public Nodo(Object dato){
+ this.dato = dato;
+ }
+ 
+ public Object getDato() 
+ {
+ return dato;
+ }
+ public void setDato(int dato) 
+ {
+ this.dato = dato;
+ }
+ public Nodo getNext() 
+ {
+ return next;
+ }
+ public void setNext(Nodo next) 
+ {
+ this.next = next;
+ }
+
+</>
+
+Funcion:  #toString#
+Devuelve:  #String#
+Recibe:  #Void#
+

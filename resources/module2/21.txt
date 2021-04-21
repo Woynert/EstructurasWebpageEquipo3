@@ -1,0 +1,153 @@
+#Primero# creamos la clase, declaramos los atributos top,max, que y cola e introducimos un metodo constructor.
+
+<> public class pilaarray{
+
+     private int tope,max,que;
+     private Object cola[];
+    
+     public pilaarray(int m)
+     {
+      max=m;
+      cola=new Object[max];
+      tope=0; 
+      que=0;
+     } 
+</>
+
+Metodo: #isFull#
+Devuelve: #Booleano#
+Recibe: #void#
+
+Descripción: Determina si la pila esta llena.
+<>
+     public boolean isFull()
+     {
+         return max == que;
+     }
+</>
+
+Metodo: #Agregar#
+Devuelve: #void#
+Recibe: #Object#
+
+Descripción: Agrega un elemento a la pila.
+<>   
+     private void Agregar(Object object)
+     {
+      if(isFull())
+      {
+       System.out.println("LA COLA ESTÁ LLENA");
+      }
+      else
+      {
+          que++; 
+          cola[que] = ITEM;
+      }
+     }
+</>
+
+Metodo: #Eliminar#
+Devuelve: #void#
+Recibe: #void#
+
+Descripción: Elimina el elemento que esta en el tope.
+
+<>
+     private void Eliminar()
+     {
+          if(tope==que)
+          {
+               System.out.println("LA COLA ESTÁ VACIA");
+          }
+          else
+          {            
+              for(int i=tope;i < que - 1;i++)
+              {
+               cola[i] = cola[i+1];
+              }
+              
+              que--;
+          }
+     }
+</>
+
+Metodo: #Mostrar#
+Devuelve: #void#
+Recibe: #void#
+
+Descripción: Imprime la pila.
+
+<>
+     private void Mostrar()
+     {
+          if(Vacia())
+          {
+               System.out.println("LA COLA ESTÁ VACIA\n NO HAY DATOS QUE MOSTRAR");
+          }
+          else
+          {
+               String string = "";
+               
+               for(int i=tope+1;i<=que;i++)
+               {
+               string = string + cola[i]+"\n";
+               }
+               
+               System.out.println("LA COLA ES:" + string);
+          }
+     }
+</>
+
+Metodo: #Buscar#
+Devuelve: #Booleano#
+Recibe: #String#
+
+Descripción: Busca un elemento dentro de la pila.
+
+<>     
+     private boolean Buscar(String dato)
+     {
+          boolean encontrado=false;
+          if(!Vacia())
+          {
+          for(int a=(tope-1);a>=0;a--)
+          {
+          if(pila[a].equals(dato)) encontrado=true;
+          }
+          }
+          else System.out.println("No hay datos para buscar en la cola");
+          return encontrado;
+     }
+</>
+
+Metodo: #Vacia#
+Devuelve: #Booleano#
+Recibe: #void#
+
+Descripción: Comprueba si la cola esta vacia.
+
+<>     
+     private boolean Vacia()
+     { 
+          return tope == que;
+     }
+</>
+
+Metodo: #VaciarCola#
+Devuelve: #void#
+Recibe: #void#
+
+Descripción: Vacia la pila.
+
+<>
+     public void VaciarCola()
+     {
+          tope = 0;
+          que = 0;
+          cola=new Object[max];
+     } 
+} 
+
+
+
+</>

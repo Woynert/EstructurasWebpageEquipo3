@@ -1,0 +1,136 @@
+Para la cola basa en arreglos, como su nombre indica no necesita ni nodos ni listas, para este ejemplo se tomaran los datos dentro de la cola como strings.
+
+Estos son los atributos y el metodo constructor de la cola con arrays:
+
+<>
+private int tope,max,que;
+private String cola[];
+    
+public colaarray(int m)
+{
+    max=m;
+    cola = new String[max];
+    top=0; 
+    que=0;
+}
+</>
+
+Metodo: #isFull#
+Devuelve: #boolean#
+Recive: #Void#
+
+Descripción: Revisa si la cola esta llena.
+
+<>
+private boolean isFull()
+{
+    return que == max; 
+}
+</>
+
+Metodo: #isEmpty#
+Devuelve: #boolean#
+Recive: #Void#
+
+Descripción: Revisa si la cola esta vacia.
+
+<>
+private boolean isEmpty()
+{
+    return que == top; 
+}
+</>
+
+Metodo: #insert#
+Devuelve: #void#
+Recive: #Void#
+
+Descripción: Insterta un elemento en la estructura cola.
+
+<>
+private void insert()
+{
+    if(isFull)
+{
+    cola[top]=n;
+    top++;
+    System.out.println("Dato agregado");
+    }
+    else
+    {
+    System.out.println("Ya no caben mas datos");
+    }
+}
+</>
+
+Metodo: #remove#
+Devuelve: #void#
+Recive: #Void#
+
+Descripción: Elimina un elemento de la estructura cola.
+
+<>
+private void remove()
+{
+    if(top>0)
+    {
+    top--;
+    System.out.println("Dato eliminado");
+    }
+    else
+    {
+    System.out.println("Ya no hay datos para eliminar");
+    }
+}
+</>
+
+Metodo: #toString#
+Devuelve: #void#
+Recive: #Void#
+
+Descripción: Imprime la estructura.
+
+<>
+private void toString()
+{
+if(!isEmpty())
+{
+    for(int a=(top-1);a>=0;a--){
+    System.out.println(cola[a]);
+    }
+    else {
+        System.out.println("cola vacia");
+    }
+}
+</>
+
+Metodo: #search#
+Devuelve: #void#
+Recive: #Void#
+
+Descripción: Busca un elemento en la cola.
+
+<>
+private boolean search(String dato)
+{
+    if(!isEmpty())
+    {
+    for(int a=(top-1);a>=0;a--)
+        {
+    if(cola[a].equals(dato)) encontrado=true;
+        }
+        }
+        else System.out.println("No hay datos para buscar en la cola");
+        return encontrado;
+    }
+}
+</>
+
+
+
+
+
+
+
+
+

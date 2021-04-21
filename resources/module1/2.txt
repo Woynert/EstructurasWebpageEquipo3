@@ -1,0 +1,2 @@
+Son estructuras de datos de tamaño fijo o dinámico de modo que cada elemento puede ser eficientemente ubicado por su index ó dirección, que inicia desde 0, con el cual se puede localizar de forma rápida un elemento en el arreglo y estos elementos son únicamente de un tipo. Son la base de muchos otros tipos de estructuras de datos.
+

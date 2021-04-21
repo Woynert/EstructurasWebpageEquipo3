@@ -1,0 +1,3 @@
+El Orden de un árbol es el #número máximo de hijos que puede tener un Nodo#.
+
+Un árbol con Orden = 1 no tendría sentido ya que seria una estructura lineal. Este valor no se calcula, si no que ya lo se debe conocer en el momento que se diseña la estructura, ya que si se quiere calcular lo que se obtiene es el grado.

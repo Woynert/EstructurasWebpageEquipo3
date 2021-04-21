@@ -1,0 +1,15 @@
+Es una estructura de datos que nos permite almacenar datos de una forma organizada, al igual que los vectores pero, a diferencia de estos, esta estructura es dinámica, por lo que no tenemos que saber "a priori" los elementos que puede contener.Cada elemento #apunta al siguiente excepto el último# que no tiene sucesor y el valor del enlace es null. Por ello los elementos son registros que contienen el dato a almacenar y un enlace al siguiente elemento. Los elementos de una lista, suelen recibir también el nombre de nodos de la lista.
+
+Debe tener unos operadores asociados que permitan la #manipulación de los datos que contiene#. Los operadores básicos de una lista enlazada son:
+
+- #Insertar:# inserta un nodo con dato x en la lista, pudiendo realizarse esta inserción al principio o final de la lista o bien en orden.
+
+- #Eliminar:# elimina un nodo de la lista, puede ser según la posición o por el dato.
+
+- #Buscar:# busca un elemento en la lista.
+
+- #Localizar:# obtiene la posición del nodo en la lista.
+
+- #Vaciar:# borra todos los elementos de la lista.
+
+https://www.laaventuradeaprender.com/estructuras-de-datos-basicas-pila-cola-y-listas/

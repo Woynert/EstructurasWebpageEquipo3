@@ -1,0 +1,3 @@
+Un stack o pila, soporta la recuperación ordenada de datos #last-in, first-out (LIFO)#, es decir, el último dato en entrar es el primer dato en salir. En esta estructura sólo se tiene acceso a la cabeza o cima de la pila.
+
+

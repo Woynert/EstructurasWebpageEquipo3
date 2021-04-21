@@ -1,0 +1,992 @@
+
+<html>
+<head>
+
+	<title>structures</title>
+	<META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="*">
+	
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+   <!-- Styling -->
+	<link rel="stylesheet" href="styles/styMenu.css">
+	<link rel="stylesheet" href="styles/styMain.css">
+
+   <!-- Logic Functions -->
+	<script src="scripts/scrAccordionMenu.js"></script>
+	<script src="scripts/scrModuleInfo.js"></script>
+	<script src="scripts/scrModuleTransformation.js"></script>
+	<script src="scripts/scrMain.js"></script>
+   
+   <!-- Code Highlighting -->
+   <link rel="stylesheet" href="Libraries/codeHighlight/styles/gruvbox-dark.css">
+	<script src="Libraries/codeHighlight/highlight.pack.js"></script>
+	<script> hljs.highlightAll(); </script> 
+
+   <!-- Code Editor -->
+   <script src="Libraries/ace-builds-master/src/ace.js" type="text/javascript" charset="utf-8"></script>
+   <script src="Libraries/ace-builds-master/src/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
+   <script src="Libraries/ace-builds-master/src/mode-java.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+
+	<div class = "structureGrid">
+
+
+		<!-- MENU -->
+	    <div class = "menu">
+
+	    	<!-- TITULO -->
+	    	<div class = "menuTitle">
+	    		LVaED
+	    	</div>
+
+	    	<!-- SECCIONES -->
+    		<div class = "menuSubTitle"> <a  href="#">Módulo de presentación </a> </div>
+
+         <!-- Modulo Información -->
+    		<div>
+    			<ul>
+    				<li>
+    					<div class="accordionButton"> <a  href="#">Estructura de datos</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(1, 0)" href="#">Estructura de datos</a></li>
+                     <li><a onclick="modGoToSection(1, 1)" href="#">Tipos de estructuras de datos</a></li>
+                  </ul>
+		    			
+    				</li>
+    				<li>
+                  <div class="accordionButton"> <a onclick="modGoToSection(1, 2)" href="#">Arrays</a> </div>
+						<ul class="accordionContent">
+							<li><a onclick="modGoToSection(1, 2)" href="#">Ventajas</a></li>
+							<li><a onclick="modGoToSection(1, 3)" href="#">Ventajas</a></li>
+							<li><a onclick="modGoToSection(1, 4)" href="#">Desventajas</a></li>
+						</ul>
+               </li>
+    				<li><a onclick="modGoToSection(1, 5)" href="#">Matrices</a></li>
+					<li><a onclick="modGoToSection(1, 6)" href="#">Nodos</a></li>
+    				<li>
+                  <div class="accordionButton"> <a onclick="modGoToSection(1, 7)" href="#">Estructuras enlazadas</a> </div>
+
+		    			<ul class="accordionContent">
+		    				<li><a onclick="modGoToSection(1, 8)" href="#">Listas sencillamente enlazadas</a></li>
+		    				<li><a onclick="modGoToSection(1, 9)" href="#">Listas doblemente enlazadas</a></li>
+		    				<li><a onclick="modGoToSection(1, 10)" href="#">Listas circulares simplemente enlazadas</a></li>
+		    				<li><a onclick="modGoToSection(1, 11)" href="#">Listas circulares doblemente enlazadas</a></li>
+		    				<li>
+                        <div class="accordionButton"> <a onclick="modGoToSection(1, 12)" href="#">Arboles</a> </div> 
+                        <ul class="accordionContent">
+                           <li><a onclick="modGoToSection(1, 20)" href="#">Tipos de Nodos</a></li>
+                           <li><a onclick="modGoToSection(1, 21)" href="#">Nivel</a></li>
+                           <li><a onclick="modGoToSection(1, 22)" href="#">Altura</a></li>
+                           <li><a onclick="modGoToSection(1, 23)" href="#">Peso</a></li>
+                           <li><a onclick="modGoToSection(1, 24)" href="#">Orden</a></li>
+                           <li><a onclick="modGoToSection(1, 25)" href="#">Grado</a></li>
+                           <li><a onclick="modGoToSection(1, 27)" href="#">Búsquedas no informadas</a></li>
+                           <li><a onclick="modGoToSection(1, 28)" href="#">Recorrido Pre-orden</a></li>
+                           <li><a onclick="modGoToSection(1, 29)" href="#">Recorrido Pos-orden</a></li>
+                           <li><a onclick="modGoToSection(1, 30)" href="#">Recorrido in-orden</a></li>
+                           <li><a onclick="modGoToSection(1, 31)" href="#">Búsqueda en amplitud</a></li>
+                           <li><a onclick="modGoToSection(1, 26)" href="#">Sub-Arbol</a></li>
+                           <li><a onclick="modGoToSection(1, 13)" href="#">Arboles binarios</a></li>
+                           <li><a onclick="modGoToSection(1, 14)" href="#">Arboles n-ario</a></li>
+                        </ul>
+                     </li>
+		    				<li><a onclick="modGoToSection(1, 15)" href="#">Grafos</a></li>
+		    			</ul>
+    				</li>
+    				<li>
+                  <div class="accordionButton"> <a onclick="modGoToSection(1, 16)" href="#">Contenedores</a> </div>
+
+		    			<ul class="accordionContent">
+		    				<li><a onclick="modGoToSection(1, 17)" href="#">Pilas</a></li>
+		    				<li><a onclick="modGoToSection(1, 18)" href="#">Colas</a></li>
+		    				<li><a onclick="modGoToSection(1, 19)" href="#">Colas de prioridad</a></li>
+		    			</ul>
+
+    				</li>
+					<li>
+    					<a onclick="modGoToSection(1,32)" href="#">Referencia</a>
+    				</li>
+    			</ul>
+    		</div>
+
+         <!-- Modulo Ejemplos -->
+    		<div class = "menuSubTitle"> <a href="#">Módulo de ejemplos </a> </div>
+         <div>
+            <ul>
+               <li> <div class="accordionButton"> <a  href="#">Lista sencillamente enlazada</a> </div>
+                  <ul class="accordionContent">
+                  <li><a onclick="modGoToSection(2, 0)" href="#">Java</a></li>
+                  <li><a onclick="modGoToSection(2, 1)" href="#">Python</a></li>
+                  <li><a onclick="modGoToSection(2, 2)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Lista doblemente enlazada</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 3)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 4)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 5)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Lista circulare simplemente enlazada</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 6)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 7)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 8)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Lista circulare doblemente enlazada</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 9)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 10)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 11)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Arbol binario</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 12)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 13)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 14)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Arbol AVL</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 15)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 16)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 17)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Arbol B</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 18)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 19)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 20)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Pilas con Arreglos</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 21)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 22)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 23)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Pilas con Listas</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 24)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 25)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 26)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Colas con Arreglos</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 27)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 28)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 29)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Colas con Listas</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 30)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 31)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 32)" href="#">C</a></li>
+                  </ul>
+               </li>
+               <li> <div class="accordionButton"> <a  href="#">Colas de prioridad</a> </div>
+                  <ul class="accordionContent">
+                     <li><a onclick="modGoToSection(2, 33)" href="#">Java</a></li>
+                     <li><a onclick="modGoToSection(2, 34)" href="#">Python</a></li>
+                     <li><a onclick="modGoToSection(2, 35)" href="#">C</a></li>
+                  </ul>
+               </li>
+
+            </ul>
+         </div>
+
+         <!-- Modulo Transformación -->
+    		<div class = "menuSubTitle"> <a onclick="moduleGoTo(3)" href="#">Módulo de transformaciones </a> </div>
+
+         <div>
+            <ul>
+               <li><a onclick="modGoToSection(3, 0)" href="#">Explicación</a></li>
+               <li><a onclick="moduleGoTo(5)" href="#">Codigo a Diagrama </a></li>
+               <li><a onclick="moduleGoTo(6)" href="#">Diagrama a Codigo </a></li>
+            </ul>
+         </div>
+
+         <div class = "UPBlogo">
+            <img src="resources/svg/UPBwhite.svg" alt=""> 
+         </div>
+
+      </div>
+
+      <!-- CONTENT -->
+      <div>
+
+	    	<!-- MODULO DE INFORMACIÓN -->
+         <div id = "MODULE1" class = "MODULE1">
+
+               
+            <!-- header -->
+            <div class = "m1-titleContainer" id = "m1-titleContainer" >
+               <div class = "m1-title">
+						<p id="m1-title">Modulo1</p>
+               </div>
+            </div>
+   
+            <!-- background -->
+            <div class = "m1-contentBackgroundContainer">
+               <div class = "m1-contentBackground"></div>
+            </div>
+
+            <!-- content -->
+            <div class = "m1-contentContainer">
+               <div class = "m1-content">
+                  
+                  <div id="m1-content">
+                     <p>Text inside</p>
+                  </div>
+
+                  <div class = "m1-contentImg">
+                     <img id="m1-img" src="resources/images/woynert.jpg" alt=""> <!-- -->
+                  </div>
+               </div>
+            </div>
+   
+            <!-- footer -->
+            <div class = "m1-footerContainer" id = "m1-footerContainer" >
+               <div class = "m1-footer" >
+                  <div class = "m1-buttonGrid">
+                     <button onclick="btnPrevious(1)">Atras</button>
+                     <div></div>
+                     <button onclick="btnNext(1)">Siguiente</button>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+         <!-- MODULO DE EJEMPLOS -->
+         <div id = "MODULE2" class = "MODULE1">
+            <!-- header -->
+            <div class = "m1-titleContainer" id = "m2-titleContainer" >
+               <div class = "m1-title">
+						<p id="m2-title">Modulo1</p>
+               </div>
+            </div>
+   
+            <!-- background -->
+            <div class = "m1-contentBackgroundContainer">
+               <div class = "m1-contentBackground"></div>
+            </div>
+
+            <!-- content -->
+            <div class = "m1-contentContainer">
+               <div class = "m1-content">
+                  
+                  <div id="m2-content">
+                     <p>Text inside</p>
+                  </div>
+
+                  <div class = "m1-contentImg">
+                     <img id="m2-img" src="resources/images/woynert.jpg" alt=""> <!-- -->
+                  </div>
+               </div>
+            </div>
+   
+            <!-- footer -->
+            <div class = "m1-footerContainer" id = "m2-footerContainer" >
+               <div class = "m1-footer" >
+                  <div class = "m1-buttonGrid">
+                     <button onclick="btnPrevious(2)">Atras</button>
+                     <div></div>
+                     <button onclick="btnNext(2)">Siguiente</button>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+   
+         
+
+	    	<!-- MODULO DE TRANSFORMACIÓN GRAFICA -->
+    		<div id = "MODULE3" class = "MODULE3">
+            <div class = "m3-mainGrid">
+
+               <!-- Canva -->
+               <div>	
+
+                  <div class="m3-canvaControlsFloat">
+                     <div class="m3-canvaControlsContainer">
+                        <button onclick="btnM3ZoomIncrease()">Acercar</button>
+                        <button onclick="btnM3ZoomDecrease()">Alejar</button>
+                     </div>
+                  </div>
+                  <div id = "m3-canvaContainer" class = "m3-canva" >
+                     <canvas id = "m3-canva" ></canvas>
+                  </div>
+               </div>
+
+               <!-- Settings -->
+               <div id = "m3-settings" class = "m3-settings">
+                  <p id = "m3-settingsNodeName" > Nombre </p>
+
+                  <!-- Classes DISABLED -->
+                  <div class = "m3-settingsChildrenContainer" style="display: none;">
+                     <p class = "m3-settingsSubtitle ">Classes:</p>
+
+                     <table>
+                        <tbody id = "m3-settingsClasses">
+                           <tr>
+                           <th>Name</th>
+                           <th>Extends</th>
+                           <th>Implements</th>
+                           <th>Protection</th>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                     <div class = "m3-settingsAccordionExpand">Agregar Clase</div>
+                     <div class = "m3-settingsAccordionContent">
+                        <div class = "m3-settingsAccordionContentBox">
+
+                           <div class = "m3-input m3-inputSelect">
+                              <p>Visibilidad:</p>
+                              <select id = "m3-classProtection" name= "optionlist">
+                              <option>public</option>
+                              <option>private</option>
+                              <option>protected</option>
+                              </select>
+                           </div>
+
+                           <div class = "m3-input">
+                              <p>Nombre:</p>
+                              <input id = "m3-className" type="text">
+                           </div>
+
+                           <div class = "m3-input">
+                              <p>Extiende:</p>
+                              <input  id = "m3-classExtend" type="text">
+                           </div>
+
+                           <div class = "m3-input">
+                              <p>Implementa:</p>
+                              <input id = "m3-classImplement" type="text">
+                           </div>
+                           
+                           <button class="m3-addButton" id="m3-addButton" onclick="btnSettingsAdd(1)" >Agregar</button>
+                        </div>
+                     </div>
+                     
+                  </div>
+
+                  <!-- Variables -->
+                  <div class = "m3-settingsChildrenContainer" >
+                     <p class = "m3-settingsSubtitle ">Variables:</p>
+
+                     <table>
+                        <tbody id = "m3-settingsVariables">
+                           <tr>
+                           <th>Name</th>
+                           <th>Type</th>
+                           <th>Protection</th>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                     <div class = "m3-settingsAccordionExpand">Agregar Variable</div>
+                     <div class = "m3-settingsAccordionContent">
+                        <div class = "m3-settingsAccordionContentBox">
+
+                           <div class = "m3-input m3-inputSelect">
+                              <p>Visibilidad:</p>
+                              <select id = "m3-variableProtection" name= "optionlist">
+                              <option>public</option>
+                              <option>private</option>
+                              <option>protected</option>
+                              </select>
+                           </div>
+
+                           <div class = "m3-input">
+                              <p>Nombre:</p>
+                              <input id = "m3-variableName" type="text">
+                           </div>
+
+                           <div class = "m3-input">
+                              <p>Tipo de dato:</p>
+                              <input id = "m3-variableDatatype" type="text">
+                           </div>
+                           
+                           <button class="m3-addButton" id="m3-addButton" onclick="btnSettingsAdd(2)" >Agregar</button>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Methods -->
+                  <div class = "m3-settingsChildrenContainer" >
+                     <p class = "m3-settingsSubtitle ">Methods:</p>
+
+                     <table>
+                        <tbody id = "m3-settingsMethods">
+                           <tr>
+                           <th>Name</th>
+                           <th>Type</th>
+                           <th>Protection</th>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                     <div class = "m3-settingsAccordionExpand">Agregar Metodo</div>
+                     <div class = "m3-settingsAccordionContent">
+                        <div class = "m3-settingsAccordionContentBox">
+
+                           <div class = "m3-input m3-inputSelect">
+                              <p>Visibilidad:</p>
+                              <select id = "m3-methodProtection" name= "optionlist">
+                              <option>public</option>
+                              <option>private</option>
+                              <option>protected</option>
+                              </select>
+                           </div>
+
+                           <div class = "m3-input">
+                              <p>Nombre:</p>
+                              <input id = "m3-methodName" type="text">
+                           </div>
+
+                           <div class = "m3-input">
+                              <p>Tipo de dato:</p>
+                              <input id = "m3-methodDatatype" type="text">
+                           </div>
+                           
+                           <button class="m3-addButton" id="m3-addButton" onclick="btnSettingsAdd(3)" >Agregar</button>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Codigo DISABLED -->
+                  <div class = "m3-settingsChildrenContainer" style="display: none;">
+                     <p class = "m3-settingsSubtitle ">Codigo:</p>
+                     <div id = "m3-settingsCode" >
+                        Around the world around the world
+                     </div>
+                  </div>
+
+                  <div class = "m3-settingsChildrenContainer" >
+                     <button onclick="moduleGoTo(5)" class="m3-convertButton" >Convertir a codigo</button>
+                  </div>
+
+               </div>
+         
+         
+            </div>
+            
+               
+            
+	    	</div>
+
+         <!-- MODULO DE TRANSFORMACIÓN CODIGO -->
+         <div id = "MODULE3Code" class = "MODULE3">
+            <div class = "m3-mainGrid">
+
+               <!-- Editor -->
+               <div id="editor">
+                  package edu;
+                  
+                  import java.util.Iterator;
+                  
+                  import static java.lang.System.*;
+                  
+                  public class List implements ListInterface, Iterable<ListNode> {
+                  
+                     
+                     private ListNode inode; //iterator node
+                     private int size;
+                  
+                     public ListNode head;
+                     public ListNode tail;
+                  
+                     /**
+                     * List
+                     */
+                     public List() {
+                        clear();
+                     }
+                  
+                     //constructor with Object
+                     public List(Object object) {
+                        add(object);
+                     }
+                  
+                     //check emptyness
+                     public boolean isEmpty() {
+                        return (head == null);
+                     }
+                  
+                     //get size
+                     public int getSize() {
+                        return size;
+                     }
+                  
+                     //wipe
+                     public void clear() {
+                        head = null;
+                        tail = null;
+                        size = 0;
+                     }
+                  
+                     //get head
+                     public Object getHead() {
+                        return head;
+                     }
+                  
+                     //get tail
+                     public Object getTail() {
+                        return tail;
+                     }
+                  
+                     //find and return an object as a ListNode
+                     public ListNode search(Object object) {
+                  
+                        Iterator<ListNode> i = this.iterator();
+                        ListNode inode;
+                  
+                        while ((inode = i.next()) != null) {
+                           //System.out.println(inode);
+                              if (inode.getObject().toString().equals(object.toString())) {
+                                 return inode;
+                              }
+                        }
+                        return null;
+                     }
+                  
+                     //add object
+                     public boolean add(Object object) {
+                        return insertTail(object);
+                     }
+                  
+                     //insert object in node location
+                     public boolean insert(ListNode node, Object object) {
+                        try{
+                  
+                           //tail node
+                              if (node.next == null){
+                                 add(object);
+                              } 
+                           //head or middle node
+                           else{
+                                 ListNode newNode = new ListNode(object); //create new node
+                                 newNode.next = node.next; 
+                                 node.next = newNode; //Old -> New -> Tail
+                              }
+                              size++;
+                              return true;
+                        }
+                        catch (Exception e){
+                              return false;
+                        }
+                     }
+                  
+                     //insert object in object location
+                     public boolean insert(Object ob, Object object) {
+                        try{
+                              if (ob != null){
+                  
+                              //search node
+                                 ListNode node = this.search(ob);
+                  
+                                 if (node != null){ //found
+                                 return insert(node, object);
+                                 }
+                              else{ //not found
+                                    return false;
+                                 }
+                              }
+                           else{
+                                 return false;
+                              }
+                        }
+                        catch (Exception e){
+                              return false;
+                        }
+                     }
+                  
+                     //insert new head
+                     public boolean insertHead(Object object) {
+                        try{
+                              if (isEmpty()){
+                                 head = new ListNode(object);
+                                 tail = head;
+                              } 
+                           else{
+                                 head = new ListNode(object, head);
+                              }
+                              this.size++;
+                              return true;
+                        }
+                        catch (Exception e){
+                              return false;
+                        }
+                     }
+                  
+                     //insert to tail
+                     public boolean insertTail(Object object) {
+                        try{
+                              if (isEmpty()){
+                                 head = new ListNode(object);
+                                 tail = head;
+                              }
+                           else{
+                                 tail.next = new ListNode(object);
+                                 tail = tail.next;
+                              }
+                              this.size++;
+                              return true;
+                        }
+                        catch (Exception e){
+                              return false;
+                        }
+                     }
+                  
+                     //remove node
+                     public boolean remove(ListNode node) {
+                        try{
+                           ListNode 
+                           remNode = this.search(node.getObject()), //verify its part of the list
+                           preNode = this.getBeforeTo(remNode.getObject());
+                  
+                           //exists?
+                           if (remNode != null){
+                              if (preNode != null){ //middle or tail
+                                 if (remNode.next != null){ //middle
+                                    preNode.next = remNode.next;
+                                 }
+                                 else{ //tail
+                                    preNode.next = null;
+                                 }
+                                 size--;
+                              }
+                              else{ //head
+                                 if (remNode.next != null){
+                                    head = remNode.next;
+                                 }
+                                 else{ //the only element in the list
+                                    head = null;
+                                 }
+                                 size--;
+                              }
+                           }
+                  
+                           return false;
+                        }
+                        catch (Exception e){
+                           return false;
+                        }
+                     }
+                  
+                     //remove node from object 
+                     public boolean remove(Object object) {
+                        try{
+                           ListNode node = this.search(object);
+                  
+                           if (node != null){
+                              remove(node);
+                           }
+                           return false;
+                        }
+                        catch (Exception e){
+                           return false;
+                        }
+                     }
+                  
+                     //Check its in the list 
+                     public boolean contains(Object object) {
+                        if (this.search(object) != null)	
+                           return true;
+                        else
+                           return false;
+                     }
+                  
+                     //Return an array version
+                     public Object[] toArray() {
+                        try{
+                           Object arr[] = new Object[size];
+                           int _ind = 0;
+                     
+                           //Iterar
+                           Iterator<ListNode> i = this.iterator();
+                           ListNode inode;
+                     
+                           while ((inode = i.next()) != null) {
+                              arr[_ind] = inode.getObject();
+                              _ind++;
+                           }
+                           return arr;
+                        }
+                  
+                        catch (Exception e){
+                           return null;
+                        }
+                     }
+                  
+                     @Override
+                     public Object[] toArray(Object[] object) {
+                        Object[] _ori = toArray();
+                  
+                        Object[] _arr = new Object[_ori.length + object.length];
+                  
+                        //copy original array
+                        for(int i = 0; i < _ori.length; i++){
+                              _arr[i] = _ori[i];
+                        }
+                  
+                        //add new array 
+                        for(int i = _ori.length; i < _arr.length; i++){
+                              _arr[i] = object[i -_ori.length];
+                        }
+                  
+                        return _arr;
+                     }
+                  
+                  
+                     //find the one before the node 
+                     public ListNode getBeforeTo(ListNode node) {
+                        if (node != null){
+                           return getBeforeTo(node.getObject());
+                        }
+                        return null;
+                     }
+                  
+                     //find the one before the object
+                     public ListNode getBeforeTo(Object object){
+                        Iterator<ListNode> i = this.iterator();
+                        ListNode inode, nodeNext;
+                  
+                        while ((inode = i.next()) != null) {
+                           if (inode.next != null){
+                              nodeNext = inode.next;
+                              if (nodeNext.getObject().toString().equals(object.toString())){
+                                 return inode;
+                              }
+                           }
+                        }
+                        return null;
+                     }
+                  
+                     //find the one next the node
+                     public Object getNextTo(ListNode node) {
+                        if (node != null){
+                           return(node.next);
+                        }
+                        return null;
+                     }
+                  
+                     //Create sublist
+                     public List subList(ListNode from, ListNode to) {
+                        try{
+                           List lsSub = new List();
+                  
+                           if (from != null && to != null){
+                              Iterator<ListNode> i = this.iterator(from);
+                              ListNode inode, newNode;
+                              boolean start = false;
+                  
+                              while ((inode = i.next()) != null) {
+                  
+                                 //start
+                                 if (inode != null){
+                  
+                                    /*System.out.println("\nAdd this: ");
+                                    System.out.println(inode);*/
+                                    if (inode.isEquals(to)){ //end
+                                       lsSub.add(inode.getObject());
+                                       break;	
+                                    }
+                                    else{
+                                       lsSub.add(inode.getObject());
+                                    }
+                                 }
+                              }
+                              return lsSub;
+                           }
+                           return null;
+                        }
+                        catch (Exception e){
+                           return null;
+                        }
+                        
+                     }
+                  
+                     @Override
+                     public List sortList() {
+                  
+                        List ls = new List();
+                  
+                        int smallerInt = 0;
+                        int sameInt = 0;
+                        int intChar = 0;
+                        Object[] arr = toArray();
+                  
+                        for (int i = 0; i < size; i++){
+                  
+                           for(int j = 0; j < size; j++){
+                              if (arr[j]	!= null){
+                                 //check smaller
+                                 if (arr[smallerInt] == null){
+                                    smallerInt = j;
+                                 }
+                                 if (((int )arr[j].toString().charAt(0)) < ((int) arr[smallerInt].toString().charAt(0))){
+                                    smallerInt = j;
+                                 }
+                                 else if (((int )arr[j].toString().charAt(0)) == ((int) arr[smallerInt].toString().charAt(0))){
+                                    sameInt = j;
+                                 }
+                              }
+                           }
+                           if (arr[smallerInt] != null){
+                              ls.add(arr[smallerInt]);
+                              arr[smallerInt] = null;
+                           }
+                           else if (arr[sameInt] != null){
+                              ls.add(arr[sameInt]);
+                              arr[sameInt] = null;
+                           }
+                        }
+                        
+                        return ls;
+                     }
+                  
+                     //iterator
+                     public Iterator<ListNode> iterator() {
+                        inode = head;
+                        return new Iterator<>(){
+                           
+                           //is there a next one?
+                              public boolean hasNext(){
+                                 return inode.next != null;
+                              }
+                  
+                              //get next
+                              public ListNode next(){
+                                 if (inode != null){
+                                    ListNode tmp = inode;
+                                    inode = inode.next;
+                                    return tmp;
+                                 }
+                              else{
+                                    return null;
+                                 }
+                              }
+                        };
+                     }
+                  
+                     //iterator custom start
+                     public Iterator<ListNode> iterator(ListNode node) {
+                        if (node != null)
+                           inode = node;
+                        else
+                           inode = head;
+                  
+                        return new Iterator<>(){
+                           
+                           //is there a next one?
+                              public boolean hasNext(){
+                                 return inode.next != null;
+                              }
+                  
+                              //get next
+                              public ListNode next(){
+                                 if (inode != null){
+                                    ListNode tmp = inode;
+                                    inode = inode.next;
+                                    return tmp;
+                                 }
+                              else{
+                                    return null;
+                                 }
+                              }
+                        };
+                     }
+                  
+                     //print list
+                     public void rec(ListNode node) {
+                        
+                        out.println(node.toString());
+                        if (node.next != null) {
+                              rec(node.next);
+                              // <- ;) ->
+                        }
+                     }
+                  
+                  }
+               </div>
+
+               <!-- Settings -->
+               <div class = "m3-settings">
+                  GUI
+                  <input type="file" id="m3-inputFile" accept=".java" onchange="codeFileImport()">
+                  <button onclick="moduleGoTo(4)" class="m3-convertButton" >Convertir a Diagrama</button>
+                  <p id = "m3-fileInfo"></p>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- MODULO3 DE INFORMACIÓN -->
+         <div id = "MODULE3Info" class = "MODULE1">
+
+                     
+                  <!-- header -->
+                  <div class = "m1-titleContainer" id = "m3-titleContainer" >
+                     <div class = "m1-title">
+                        <p id="m3-title">Modulo1</p>
+                     </div>
+                  </div>
+         
+                  <!-- background -->
+                  <div class = "m1-contentBackgroundContainer">
+                     <div class = "m1-contentBackground"></div>
+                  </div>
+
+                  <!-- content -->
+                  <div class = "m1-contentContainer">
+                     <div class = "m1-content">
+                        
+                        <div id="m3-content">
+                           <p>Text insides</p>
+                        </div>
+
+                        <div class = "m1-contentImg">
+                           <img id="m3-img" src="resources/images/woynert.jpg" alt=""> <!-- -->
+                        </div>
+                     </div>
+                  </div>
+         
+                  <!-- footer -->
+                  <div class = "m1-footerContainer" id = "m1-footerContainer" >
+                     <div class = "m1-footer" style="visibility: hidden;" >
+                        <div class = "m1-buttonGrid">
+                           <button onclick="btnPrevious(1)">Atras</button>
+                           <div></div>
+                           <button onclick="btnNext(1)">Siguiente</button>
+                        </div>
+                     </div>
+                  </div>
+
+         </div>
+
+
+
+      </div>
+
+    
+</body>
+</html>
+
+<!-- 
+
+<button onclick="btnSecc1()" class = "menuButton">Modulo1</button>
+<button onclick="printThis('Hey')" class = "menuButton">Modulo2</button>
+<button onclick="btnSecc3()" class = "menuButton">Modulo3</button>
+-->

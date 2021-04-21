@@ -1,0 +1,5 @@
+Es una colección de valores, la relación que existe entre estos valores y las operaciones que podemos hacer sobre ellos; en pocas palabras se refiere a #cómo los datos están organizados y cómo se pueden administrar#. Una estructura de datos describe el formato en que los valores van a ser #almacenados#, cómo van a ser accedidos y modificados, pudiendo así existir una gran cantidad de estructuras de datos.
+
+#¿Por qué son útiles las estructuras de datos?#
+
+Las estructuras de datos son útiles porque siempre se manipularan datos, y si los datos están organizados, esta tarea será mucho más fácil.

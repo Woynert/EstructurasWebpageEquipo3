@@ -1,0 +1,374 @@
+Para la lista sencilla necesitaremos los siguientes metodos que podemos encontrar en la #interfaz# y un nodo con sus respectivos metodos para su manejo.
+
+#Nodo#
+
+El nodo tiene dos atribulos los cuales son una variable Objeto llamada object y una ListNode denominada next, con sus getters y setters.
+
+<>
+public class ListNode {
+
+    private Object object;
+    public ListNode next;
+
+    public ListNode() {
+        this.object = null;
+        this.next = null;
+    }
+
+    public ListNode(Object object) {
+        this.object = object;
+        this.next = null;
+    }
+
+    public ListNode(Object object, ListNode next) {
+        this.object = object;
+        this.next = next;
+    }
+
+    public Object getObject() {
+        return object;
+    }
+
+    public void setObject(Object object) {
+        this.object = object;
+    }
+</>
+
+Function: #toString#
+Devuelve: #String#
+Recive: #Void#
+
+Descripción: Ayuda a imprimir la lista de objetos
+
+<>
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "object=" + object +
+                ", next=" + next +
+                '}';
+    }
+</>
+
+#Interfaz# 
+
+<>
+import java.util.Iterator;
+public interface ListInterface {
+
+    public boolean  isEmpty();
+    public int      getSize();
+    public void     clear();
+    public Object   getHead();
+    public Object   getTail();
+    public ListNode search(Object object);
+    public boolean  add(Object object);
+    public boolean  insert(ListNode node, Object object);
+    public boolean  insert(Object ob, Object object);
+    public boolean  insertHead(Object object);
+    public boolean  insertTail(Object object);
+    public boolean  remove(ListNode node);
+    public boolean  remove(Object object);
+}
+</>
+
+Así inicia el archivo List. Tiene cuatro atributos un int llamado size, el ListNode head, el ListNode tail y el ListNode inode, ademas de los Cconstructores.
+
+<>
+public class List implements ListInterface, Iterable<ListNode> {
+
+private ListNode inode; //iterator node
+private int size;
+
+public ListNode head;
+public ListNode tail;
+
+//constructores
+
+public List() {
+    clear();
+}
+
+public List(Object object) {
+    add(object);
+}
+
+</>
+
+A continuación explicaremos los metodos
+
+Function: #isEmpty#
+Devuelve: #Boolean#
+Recive: #Void#
+
+Descripción: Consiste en comprobar si la lista está vacia.
+
+<>
+public boolean isEmpty() {
+   return (head == null);
+}
+</>
+
+Function: #getSize#
+Devuelve: #int#
+Recive: #Void#
+
+Descripción: Se encarga de devolver el tamaño de la lista.
+
+<>
+public int getSize() {
+   return size;
+}
+</>
+
+Function: #clear#
+Devuelve: #void#
+Recive: #Void#
+
+Descripción: Se encarga de Limpiar la lista.
+
+<>
+public void clear() {
+   head = null;
+   tail = null;
+   size = 0;
+}
+</>
+
+Function: #getHead#
+Devuelve: #Object#
+Recive: #Void#
+
+Descripción: Obtiene la cabeza de la lista.
+
+<>
+public Object getHead() {
+    return head;
+}
+</>
+
+Function: #getTail#
+Devuelve: #Object#
+Recive: #Void#
+
+Descripción: Obtiene la cola de la lista.
+
+<>
+public Object getTail() {
+    return tail;
+}
+</>
+
+Function: #search#
+Devuelve: #ListNode#
+Recive: #Object object#
+
+Descripción: Encuentra y delvuelve un elemento que se encuentre dentro de la lista.
+
+<>
+public ListNode search(Object object) {
+    Iterator<ListNode> i = this.iterator();
+    ListNode inode;
+
+    while ((inode = i.next()) != null) {
+        if (inode.getObject().toString().equals(object.toString())) {
+            return inode;
+        }
+    }
+        return null;
+    }
+</>
+
+
+
+Function: #add#
+Devuelve: #Boolean#
+Recive: #Object object#
+
+Descripción: Agrega un elemento a la lista.
+
+<>
+public boolean add(Object object) {
+    return insertTail(object);
+}
+</>
+
+Function: #insert#
+Devuelve: #Boolean#
+Recive: #ListNode node, Object object#
+
+Descripción: Insertar objeto en la ubicación del nodo.
+
+<>
+public boolean insert(ListNode node, Object object) {
+    try{
+		//tail node
+        if (node.next == null){
+            add(object);
+        } 
+		//head or middle node
+		else{
+            ListNode newNode = new ListNode(object); //create new node
+            newNode.next = node.next; 
+            node.next = newNode; //Old -> New -> Tail
+        }
+        size++;
+        return true;
+    }
+	catch (Exception e){
+        return false;
+    }
+}
+</>
+
+Function: #insert#
+Devuelve: #Boolean#
+Recive: #Object ob, Object object#
+
+Descripción: Insertar objeto en la ubicación del objeto.
+
+<>
+public boolean insert(Object ob, Object object) {
+    try{
+        if (ob != null){
+			//search node
+            ListNode node = this.search(ob);
+            if (node != null){ //found
+				return insert(node, object);
+            }
+			else{ //not found
+                return false;
+            }
+        }
+		else{
+            return false;
+        }
+    }
+	catch (Exception e){
+         return false;
+    }
+}
+</>
+
+Function: #insertHead#
+Devuelve: #Boolean#
+Recive: #Object object#
+
+Descripción: Insertar un elemento en la cabesa de la lista.
+
+<>
+public boolean insertHead(Object object) {
+    try{
+        if (isEmpty()){
+            head = new ListNode(object);
+            tail = head;
+        } 
+		else{
+            head = new ListNode(object, head);
+        }
+        this.size++;
+        return true;
+    }
+	catch (Exception e){
+        return false;
+    }
+}
+</>
+
+Function: #insertTail#
+Devuelve: #Boolean#
+Recive: #Object object#
+
+Descripción: Insertar un elemento en la cola de la lista.
+
+<>
+public boolean insertTail(Object object) {
+    try{
+        if (isEmpty()){
+            head = new ListNode(object);
+            tail = head;
+        }
+		else{
+            tail.next = new ListNode(object);
+            tail = tail.next;
+        }
+        this.size++;
+        return true;
+    }
+	catch (Exception e){
+        return false;
+    }
+}
+</>
+
+Function: #remove#
+Devuelve: #Boolean#
+Recive: #ListNode node#
+
+Descripción: Elimina un nodo de la lista.
+
+<>
+public boolean remove(ListNode node) {
+	try{
+		ListNode 
+		remNode = this.search(node.getObject()), //verify its part of the list
+		preNode = this.getBeforeTo(remNode.getObject());
+		//exists?
+		if (remNode != null){
+			if (preNode != null){ //middle or tail
+				if (remNode.next != null){ //middle
+					preNode.next = remNode.next;
+				}
+				else{ //tail
+					preNode.next = null;
+				}
+				size--;
+			}
+			else{ //head
+				if (remNode.next != null){
+					head = remNode.next;
+				}
+				else{ //the only element in the list
+					head = null;
+				}
+				size--;
+			}
+		}
+		return false;
+	}
+	catch (Exception e){
+		return false;
+	}
+}
+</>
+
+Function: #remove#
+Devuelve: #Boolean#
+Recive: #Object object#
+
+Descripción: Eliminar nodo del objeto .
+
+<>
+public boolean remove(Object object) {
+	try{
+		ListNode node = this.search(object);
+		if (node != null){
+			remove(node);
+		}
+		return false;
+	}
+	catch (Exception e){
+		return false;
+	}
+}
+</>
+
+
+
+
+
+
+
+
+
+

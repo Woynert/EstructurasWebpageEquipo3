@@ -1,0 +1,2 @@
+Es cada uno de los elementos de una lista enlazada, un árbol o un grafo en una estructura de datos. Cada nodo tiene sus propias características.
+

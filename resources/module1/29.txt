@@ -1,0 +1,1 @@
+Se recorre el pos-orden cada uno de los sub-árboles y al final se recorre la raíz.

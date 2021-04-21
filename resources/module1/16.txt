@@ -1,0 +1,1 @@
+Las estructuras de tipo contenedor se caracterizan principalmente por la forma particular de #recuperación ordenada de datos# que soportan, y en los dos tipos principales de contenedores (pilas y colas) el orden de recuperación depende del orden de inserción.
