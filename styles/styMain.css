@@ -7,6 +7,18 @@
 
    --backgroundColor: teal;
    --moduleInfoContentColor: #efefef;
+
+   --menuBackgroundColor: #22222d;
+
+   --contentTitleBackground: #2b2b3b;
+}
+
+.nav-menu > li > a::before {
+   content: "";
+}
+
+ul{ 
+   list-style-type: none;
 }
 
 body{
@@ -42,7 +54,7 @@ p{
 
    overflow-y: scroll;
 
-	background-color: lightgray;
+	background-color: var(--menuBackgroundColor);
 	padding: 5px;
 }
 
@@ -52,10 +64,12 @@ p{
 
 	color: black;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 40px;
 
 	margin-top: 2px;
 	margin-bottom: 50px;
+
+   color: var(--backgroundColor);
 }
 
 .menuSubTitle{
@@ -145,7 +159,7 @@ p{
    width: var(--contentWidth);
    height: 100%;
 
-	background-color: darkgray;
+	background-color: var(--contentTitleBackground);
 }
 
 .m1-title{
@@ -161,13 +175,13 @@ p{
    width: var(--contentWidth);
    height: 100%;
 
-	background-color: darkgray;
+	background-color: var(--contentTitleBackground);
 
 }
 
 .m1-title > p{
 
-	color:  red;
+	color:  whitesmoke;
 	font-size: 2em;
 }
 
@@ -180,7 +194,7 @@ p{
    width: var(--contentWidth);
    height: 100%;
 
-   background-color: var(--moduleInfoContentColor);
+   background-color: white;
 }
 
 .m1-contentContainer{
@@ -321,10 +335,28 @@ pre > code{
 }
 
 .m1-buttonGrid{
-
+   height: 100%;
    width: 100%;
    display: grid;
    grid-template-columns: 20% 60% 20%;
+}
+
+.m1-buttonGrid > button{
+   
+
+   box-sizing: border-box; 
+
+   width: 100%;
+
+   background-color: #3f3f57;
+   color: whitesmoke;
+   font-size: 1.2em;
+
+   border: 0;
+}
+
+.m1-buttonGrid > button:active{
+   background-color: #2c2c3f;
 }
 
 /* ===== MODULE 3 ===== */
@@ -368,7 +400,7 @@ pre > code{
 
 	height: 100%;
 	width: 100%;
-	background-color: darkgray;
+	background-color: var(--contentTitleBackground);
 	padding: 20px;
 }
 
@@ -387,27 +419,57 @@ pre > code{
 	z-index: 100;
 
 	position:relative;
-	top: 10px;
-	right: 10px;
+	top: 21px;
+	right: 21px;
 
 	height: 0px;
 }
 
 .m3-canvaControlsContainer{
 
-	background-color: white;
+	/*background-color: var(--contentTitleBackground);*/
+   padding: 5px;
+   background-color: #525272;
+   border: 0;
+}
+
+.m3-canvaControlsContainer > button{
+
+   background-color: #313144;
+   color: whitesmoke;
+   /*font-size: 1.2em;*/
+
+   width: 100px;
+   height: 30px;
+
+   border: 0;
+}
+
+.m3-canvaControlsContainer > button:active{
+   background-color: #20202e;
 }
 
 /* SETTINGS */
 
 .m1-settings{
-	background-color: darkgray;
+	background-color: var(--contentTitleBackground);
 }
 
 .m3-settingsChildrenContainer{
 	margin-top: 20px;
 	margin-bottom: 20px;
-	background-color: #cecece;
+
+   background-color: white;
+}
+
+.m3-settingsTitle{
+   background-color: var(--menuBackgroundColor);
+   font-size: 1.4em;
+   padding: 5px;
+   color: whitesmoke;
+
+   text-align: center;
+   font-weight: bold;
 }
 
 .m3-settingsChild, #m3-settingsNodeName, .m3-settingsSubtitle{
@@ -437,7 +499,8 @@ pre > code{
 }
 
 .m3-settingsSubtitle{
-	color: gray;
+	color: rgb(214, 214, 214);
+	background-color: var(--contentTitleBackground);
 }
 
 #m3-settingsCode{
@@ -452,7 +515,7 @@ table{
 }
 
 table, th, td {
-   border: 1px solid black;
+   border: 1px solid rgb(199, 199, 199);
    border-collapse: collapse;
    text-align: left;
 }
@@ -469,4 +532,14 @@ table, th, td {
 
 .m3-convertButton{
    width: 100%;
+}
+
+.m3-settingsAccordionExpand{
+   width: 100%;
+   background-color: var(--contentTitleBackground);
+   color: var(--backgroundColor);
+   text-align: center;
+
+   height: auto;
+   cursor: pointer;
 }

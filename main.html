@@ -59,7 +59,7 @@
     				<li>
                   <div class="accordionButton"> <a onclick="modGoToSection(1, 2)" href="#">Arrays</a> </div>
 						<ul class="accordionContent">
-							<li><a onclick="modGoToSection(1, 2)" href="#">Ventajas</a></li>
+							<li><a onclick="modGoToSection(1, 2)" href="#">Arrays</a></li>
 							<li><a onclick="modGoToSection(1, 3)" href="#">Ventajas</a></li>
 							<li><a onclick="modGoToSection(1, 4)" href="#">Desventajas</a></li>
 						</ul>
@@ -211,7 +211,7 @@
             <ul>
                <li><a onclick="modGoToSection(3, 0)" href="#">Explicación</a></li>
                <li><a onclick="moduleGoTo(5)" href="#">Codigo a Diagrama </a></li>
-               <li><a onclick="moduleGoTo(6)" href="#">Diagrama a Codigo </a></li>
+               <li><a onclick="moduleGoTo(4)" href="#">Diagrama a Codigo </a></li>
             </ul>
          </div>
 
@@ -330,6 +330,9 @@
 
                <!-- Settings -->
                <div id = "m3-settings" class = "m3-settings">
+
+                  <p class = "m3-settingsTitle"> Diagrama a codigo </p>
+
                   <p id = "m3-settingsNodeName" > Nombre </p>
 
                   <!-- Classes DISABLED -->
@@ -924,8 +927,8 @@
 
                <!-- Settings -->
                <div class = "m3-settings">
-                  GUI
-                  <input type="file" id="m3-inputFile" accept=".java" onchange="codeFileImport()">
+                  <p class = "m3-settingsTitle"> Codigo a diagrama </p>
+                  <input type="file" id="m3-inputFile" accept=".java" onchange="codeFileImport()" style="background-color: whitesmoke; width: 100%; padding-top: 10px; padding-bottom: 10px;">
                   <button onclick="moduleGoTo(4)" class="m3-convertButton" >Convertir a Diagrama</button>
                   <p id = "m3-fileInfo"></p>
                </div>

@@ -1,33 +1,88 @@
+Para la estructura de pilas con arreglos tenemos primero el metodo constructor.
+
 <>
 class Pila:
-
     def __init__(self):
         self.items=[]
-
-    def push(self, x):
-        self.items.append(x)
-
-    def pop(self):
-        try:
-            return self.items.pop()
-        except IndexError:
-            raise ValueError("La pila está vacía")
-
-    def peek(self):
-        try:
-            return self.items[-1]
-        except IndexError:
-            raise ValueError("La pila está vacía")
-
-    def isEmpty(self):
-        return self.items == []
-
-    def clear(self):
-        self.__init__()
-
-    def size(self):
-        try:
-            return len(self.items)
-        except IndexError:
-            raise ValueError("La pila está vacía")
 </>
+
+Metodo: #push#
+Devuelve: #Void#
+Recive: #self , Recive el objeto a guardar#
+
+Descripción: Inserta un objeto a la pila.
+
+<>
+def push(self, x):
+    self.items.append(x)
+</>
+
+Metodo: #push#
+Devuelve: #Elemento del top#
+Recive: #self#
+
+Descripción: Elimina el elemento del top y lo almacena.
+
+<>
+def pop(self):
+    try:
+        return self.items.pop()
+    except IndexError:
+        raise ValueError("La pila está vacía")
+</>
+
+Metodo: #peek#
+Devuelve: #Elemento del top#
+Recive: #self#
+
+Descripción: Toma sin eliminar el top de la pila.
+
+<>
+def peek(self):
+    try:
+        return self.items[-1]
+    except IndexError:
+         raise ValueError("La pila está vacía")
+</>
+
+Metodo: #isEmpty#
+Devuelve: #Booleano#
+Recive: #self#
+
+Descripción: Revia si la pila esta vacia.
+
+<>
+def isEmpty(self):
+    return self.items == []
+</>
+
+Metodo: #clear#
+Devuelve: #Void#
+Recive: #self#
+
+Descripción: Limpia la pila.
+
+<>
+def clear(self):
+    self.__init__()
+</>
+
+Metodo: #size#
+Devuelve: #Int#
+Recive: #self#
+
+Descripción: Nos da la cantidad de elementos que tiene la pila.
+
+<>
+def size(self):
+    try:
+        return len(self.items)
+    except IndexError:
+         raise ValueError("La pila está vacía")
+</>
+
+
+
+
+
+

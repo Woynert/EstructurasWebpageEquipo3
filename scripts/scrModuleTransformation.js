@@ -108,20 +108,20 @@ class MODULE3{
       this.showInfo = false;
 
 		//carro class
-		var carro = new mod3ClassNode(1, "Carro", "None", "None", "//My class \n int a = 20;");
-		carro.addMethod( new mod3MethodNode(1, "Arrancar", "void", "//My method \n int a = 20;") );
-		carro.addMethod( new mod3MethodNode(1, "Acelerar", "void", "//My method \n int a = 20;") );
-		carro.addMethod( new mod3MethodNode(1, "Frenar",   "void", "//My method \n int a = 20;") );
+		var carro = new mod3ClassNode(1, "Carro", "None", "None", "");
+		carro.addMethod( new mod3MethodNode(1, "Arrancar", "void", "") );
+		carro.addMethod( new mod3MethodNode(1, "Acelerar", "void", "") );
+		carro.addMethod( new mod3MethodNode(1, "Frenar",   "void", "") );
 
 		carro.addVar( new mod3VariableNode(0, "Gasolina", "int") );
 
 		//origin node
-		this.rootNode = new mod3Node(0, 0, "Concesionaria", "//My root \n int a = 20;");
+		this.rootNode = new mod3Node(0, 0, "Concesionaria", "");
 		this.rootNode.addClass( carro );
 
-		this.rootNode.addMethod( new mod3MethodNode(1, "GuardarVehiculo", "boolean", "//My method \n int a = 20;") );
-		this.rootNode.addMethod( new mod3MethodNode(1, "VenderVehiculo" , "boolean", "//My method \n int a = 20;") );
-		this.rootNode.addMethod( new mod3MethodNode(1, "ComprarVehiculo", "boolean", "//My method \n int a = 20;") );
+		this.rootNode.addMethod( new mod3MethodNode(1, "GuardarVehiculo", "boolean", "") );
+		this.rootNode.addMethod( new mod3MethodNode(1, "VenderVehiculo" , "boolean", "") );
+		this.rootNode.addMethod( new mod3MethodNode(1, "ComprarVehiculo", "boolean", "") );
 
 		this.rootNode.addVar( new mod3VariableNode(1, "numeroVehiculos", "int") );
 		this.rootNode.addVar( new mod3VariableNode(0, "dinero", "int") );
@@ -958,10 +958,16 @@ class MODULE3{
 
    //Convertir diagram a codigo por medio de la jerarquia de los nodos
    convertDiagramToCode(){
+
+      ConvertedText = "";
 		this.convertDiagramToCodeRecursion(this.rootNode, false);
-      //this.ConvertedText += "}";
 
       console.log(this.ConvertedText);
+
+      this.codeEditor.setValue("");
+      this.codeEditor.setValue(this.ConvertedText);
+
+      ConvertedText = "";
    }
 
    convertDiagramToCodeRecursion(node, pastInitialVars){
@@ -1046,7 +1052,7 @@ class MODULE3{
 
          //class
          case 1:
-            this.ConvertedText += "\n} \n";
+            this.ConvertedText += "} \n";
             break;
 
          //method

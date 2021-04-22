@@ -1,10 +1,42 @@
 
+:root{
+   --menuSelectionColor: rgb(39, 230, 230);
+   --menuItemColor: whitesmoke;
+}
+
+a{
+   text-decoration: none;
+   color: whitesmoke;
+}
+
+.accordionButton > p{
+   color: whitesmoke;
+}
+
+a:hover{
+   color: var(--menuSelectionColor);
+}
+
+.accordionButton:hover > a, .accordionButton:hover > p{
+   color: var(--menuSelectionColor);
+}
+
+/*accordionButton*/
 .accordionButton{
    display: inline;
 }
 
-.accordionButton:hover > a, .accordionButton:hover > p{
-   color: white;
+
+.opened, .closed{
+   /*font-weight: bold;*/
+}
+
+.opened{
+   font-size: 0.7em;
+}
+
+.closed{
+   font-size: 0.7em;
 }
 
 .accordionButton > .opened{
@@ -39,7 +71,7 @@
    bottom: 0px;
    left: 0px;
 
-   background-color: gray;
+   background-color: var(--backgroundColor);
 }
 
 .UPBlogo > img{
@@ -49,15 +81,7 @@
 
 /* -------------------------- MODULE3* -------------------------- */
 
-.m3-settingsAccordionExpand{
-   width: 100%;
-   background-color: #333333;
-   color: white;
-   text-align: center;
 
-   height: auto;
-   cursor: pointer;
-}
 
 .m3-settingsAccordionContent{
    display: none;

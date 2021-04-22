@@ -1,13 +1,226 @@
-- Nodos: Se le llama Nodo a cada elemento que contiene un Árbol.
-HOLAAAAAAA
-- Nodo Raíz: Se refiere al primer nodo de un Árbol, Solo un nodo del Árbol puede ser la Raíz.
-HOLAAAAAAA
-- Nodo Hoja: Son todos aquellos nodos que no tienen hijos, los cuales siempre se encuentran en los extremos de la estructura.
+#Para comenzar#, creamos la clase #Nodo# con sus respectivos metodos para su manejo.
 
-- Nodo Rama: Estos son todos aquellos nodos que no son la raíz  y que además tiene al menos un hijo.
+#Nodo#
 
-- Nodo Padre: Se utiliza este termino para llamar a todos aquellos nodos que tiene al menos un hijo.
+El nodo tiene dos atributos, los cuales son una variable Object llamada dato y una variable Nodo llamada next, con sus getters y setters.
 
-- Nodo Hijo: Los hijos son todos aquellos nodos que tiene un padre.
+<>
+public class Nodo 
+{
+ private Object dato;
+ private Nodo next;
+ 
+ public Nodo(Object dato){
+ this.dato = dato;
+ }
+ 
+ public Object getDato() 
+ {
+ return dato;
+ }
+ public void setDato(int dato) 
+ {
+ this.dato = dato;
+ }
+ public Nodo getNext() 
+ {
+ return next;
+ }
+ public void setNext(Nodo next) 
+ {
+ this.next = next;
+ }
 
-- Nodo Hermano: Los nodos hermanos son aquellos nodos que comparte a un mismo padre en común dentro de la estructura.
+</>
+
+Funcion:  #toString#
+Devuelve:  #String#
+Recibe:  #Void#
+
+Descripción: Ayuda a imprimir los objetos.
+<>
+public String toString()
+ {
+ String s=" "+dato+" ";
+ return s;
+ }
+}
+</>
+
+A continuación, creamos la interface #ColaInterface# para crear los metodos para la clase Cola que vamos a crear.
+
+#ColaInterface#
+
+<>
+public interface ColaInterface{
+    public void clear();
+    public boolean isEmpty();
+    public Object extract();
+    public boolean insert(Object object);
+    public int size();
+    public boolean search(Object object);
+    public void sort();
+    public void reverse();
+    public String toString();
+}
+</>
+
+Ahora creamos la clase #Cola# que implementa la interface ColaInterface, creamos los atributos y el metodo constructor y sobreescribimos los metodos.
+
+<>
+public class Cola implements ColaInterface{
+ //Declaración de atributos
+ private Nodo inicio;
+ public int tamaño=0;
+ private Nodo termino;
+
+ //Constructor sin parametros
+ public Cola()
+ {
+ inicio=null;
+ termino=null;
+ }
+</>
+
+Metodo: #Clear#
+Visibilidad: #Publica#
+Devuelve: #Void#
+Recibe: #Void#
+
+Descripción: Limpia la cola.
+
+<> 
+@Override
+public void clear(){
+    inicio = null;
+    tamaño = 0;
+    termino = null;    
+}
+</>
+
+Metodo: #Sort#
+Visibilidad: #Publica#
+Devuelve: #Void#
+Recibe: #Void#
+
+Descripción: Ordena la cola.
+
+<>
+@Override
+public void sort(){
+    Cola f = new Cola();
+    Nodo b;
+    b.insert(f);
+}
+</>
+
+Metodo: #Reverse#
+Visibilidad: #Publica#
+Devuelve: #Void#
+Recibe: #Void#
+
+Descripción: Revierte la cola.
+
+<>
+@Override
+public void reverse(){
+    Cola c = new Cola();
+    while(!isEmpty()){
+    c.insert(termino);
+    extract();
+    }
+    while(c.isEmpty()){
+        insert(c.termino);
+        c.extract();
+    }
+}
+</>
+
+Metodo: #Search#
+Visibilidad: #Publica#
+Devuelve: #Booleano#
+Recibe: #Objeto#
+
+Descripción: Busca un elemento dentro de la cola.
+
+<>
+@Override
+public boolean search(Object object){
+    return true;
+}
+</>
+
+<>
+ @Override
+ public boolean insert(Object object)
+ {
+ Nodo i=new Nodo(object);
+ i.setNext(null);
+ if(inicio==null & termino==null)
+ {
+ inicio=i;
+ termino=i;
+ }
+ termino.setNext(i);
+ termino=termino.getNext();
+ return true;
+ }
+ 
+public int size(){
+    return tamaño;
+}
+
+ //Metodo extraer dato
+ public Object extract()
+ {
+ Object dato=inicio.getDato();
+ inicio=inicio.getNext();
+ return dato;
+ }
+ 
+ //Metodo para comprobar que la cola no esta vacia
+ @Override
+ public boolean isEmpty()
+ {
+ boolean cola=false;
+ if(inicio==null & termino==null)
+ {
+ cola=true;
+ System.out.println("La cola esta vacia");
+ }
+ else
+ {
+ System.out.println("La cola no esta vacia");
+ cola=false;
+ }
+ return cola;
+ }
+ 
+ //Metodo para contar los elementos de la cola
+ public int contar()
+ {
+ int contador=0;
+ Nodo c=this.inicio;
+ while(c!=null)
+ {
+ contador++;
+ c=c.getNext();
+ }
+ System.out.println("Numero de datos en la cola: "+contador);
+ return contador;
+ }
+ 
+ //Metodo toString
+ public String toString()
+ {
+ Nodo c=this.inicio;
+ String s="";
+ while(c!=null)
+ {
+ s=s+c.toString();
+ c=c.getNext();
+ }
+ return s;
+ } 
+}
+</>

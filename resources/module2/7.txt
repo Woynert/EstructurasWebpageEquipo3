@@ -1,1 +1,168 @@
-Las estructuras enlazadas son #dadas por pointers o punteros#, que como su nombre lo indica apuntan a una dirección de memoria donde se encuentra ubicado un valor. Los pointers son los encargados de mantener los “enlaces” entre valores de modo que es posible tener una secuencia de valores todos enlazados por pointers.
+Como en los anteriores ejemplos de listas enlazadas debemos definir la estructura para el nodo, que es la siguiente:
+
+#Nodo#
+
+<>
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+</>
+
+Luego crear el metodo constructor para la lista circular simple:
+
+<>
+class create_circular_linked_list(object):
+
+    def __init__(self):
+        self.head = None
+</>
+
+Ahora se agregan los siguientes metodos:
+
+Metodo: #is_empty#
+Devuelve: #Booleano#
+Recive: #self#
+
+Descripción: Comprobar si la lista esta vacia.
+
+<>
+def is_empty(self):
+    return self.head is None
+</>
+
+Metodo: #size#
+Devuelve: #Int#
+Recive: #self#
+
+Descripción: Determinar la cantidad de elementos de la lista.
+
+<>
+def size(self):
+    cur = self.head
+    count = 0
+    while cur is not None:
+        count += 1
+        if cur.next == self.head:
+            break
+        else:
+            cur = cur.next
+    return count
+</>
+
+Metodo: #toString#
+Devuelve: #Void#
+Recive: #self#
+
+Descripción: Imprime la lista.
+
+<>
+def toString(self):
+    if self.is_empty():
+        return
+    cur = self.head
+    print(cur.data)
+    while cur.next != self.head:
+        cur = cur.next
+        print(cur.data)
+</>
+
+Metodo: #insertHead#
+Devuelve: #Void#
+Recive: #self, Elemento para insertar#
+
+Descripción: Inserta un elemento a la cabeza de la lista.
+
+<>
+def insertHead(self, data):
+    node = Node(data)
+    if self.is_empty():
+        self.head = node
+        node.next = self.head
+    else:
+        cur = self.head
+        while cur.next is not self.head:
+            cur = cur.next
+        cur.next = node
+        node.next = self.head
+        self.head = node  
+</>
+
+Metodo: #insertTail#
+Devuelve: #Void#
+Recive: #self, Elemento para insertar#
+
+Descripción: Inserta un elemento a la cola de la lista.
+
+<>
+def insertTail(self, data):
+        node = Node(data)
+        if self.is_empty():
+            self.head = node
+            node.next = self.head
+        else:
+            cur = self.head
+            while cur.next is not self.head:
+                cur = cur.next
+            cur.next = node
+            node.next = self.head
+</>
+
+Metodo: #insert_node#
+Devuelve: #Void#
+Recive: #self, Posición, Elemento para insertar#
+
+Descripción: Inserta un elemento segun la posición a la lista.
+
+<>
+def insert_node(self, index, data):
+    node = Node(data)
+    if index < 0 or index > self.size():
+        print ("Posición de inserción incorrecta")
+        return False
+    elif index == 0:
+        self.insertHead(data)
+    elif index == 0:
+        self.insertTail(data)
+    else:
+            cur = self.head
+            pre = "null" 
+            count = 0
+            while count < index:
+                pre = cur
+                cur = cur.next
+                count += 1
+            pre.next = node
+            node.next = cur
+</>
+
+Metodo: #remove#
+Devuelve: #Void#
+Recive: #self, Elemento para eliminar#
+
+Descripción: Elimina un elemento de la lista.
+
+<>
+def remove(self, data):
+    if self.is_empty():
+        return
+    elif data == self.head.data:
+        cur = self.head
+        while cur.next != self.head:
+            cur = cur.next
+        cur.next = self.head.next
+        self.head = self.head.next
+    else:
+        cur = self.head
+        pre = None
+        while cur.data != data:
+            pre = cur
+            cur = cur.next
+        pre.next = cur.next
+</>
+
+
+
+
+
+

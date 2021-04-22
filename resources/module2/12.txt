@@ -1,1 +1,355 @@
-Es la estructura de datos mas utilizada, pero también una de las mas complejas,se caracterizan por almacenar sus nodos en forma jerárquica y no en forma lineal.
+Para este ejemplo de Arbol binario en Java primero se crea el Node que contendra los atributos y metodos necesarios.
+
+#Nodo#
+
+<>
+public class Node{
+
+    public Node left;
+    public Node right;
+    public Object object;
+    public int id;
+
+    public Node(Object object,int ref){
+        this.left = null;
+        this.right = null;
+        this.object = object;
+        this.id = ref;
+    }
+
+    public Node(Node left, Object object, Node right,int ref){
+        this.left = left;
+        this.right = right;
+        this.object = object;
+        this.id = ref;
+    }
+</>
+
+Metodo: #toString#
+Devuelve: #String#
+Recive: #Void#
+
+Descripción: Imprime un nodo.
+
+<>
+@Override
+public String toString(){
+    return "Node{" +
+    "ID = " + id +
+    ", left = " + left +
+    ", right = " + right +
+    ", object = " + object +
+    "}";
+}
+</>
+
+Luego creamos la clase BinTree para agregar los metodos:
+
+<>
+public class BinTree {
+    
+    public Node root;
+
+    public BinTree(){
+        this.root = null;
+    }
+
+    public BinTree(Object object,int ref){
+        this.root = subBinTree(null ,object, null,ref);
+    }
+</>
+
+Metodo: #subBinTree#
+Devuelve: #Node#
+Recive: #Node left, Object object, Node right,int ref#
+
+Descripción: Crea un nuevo nodo.
+
+<>
+public Node subBinTree(Node left, Object object, Node right,int ref){
+    return new Node(left, object, right,ref);
+}
+</>
+
+Metodo: #isEmpty#
+Devuelve: #Boolean#
+Recive: #Void#
+
+Descripción: Revisa si la lista esta vacia.
+
+<>
+public boolean isEmpty(){
+    return root == null;
+}
+</>
+
+Metodo: #root#
+Devuelve: #Boolean#
+Recive: #Object object,int ref#
+
+Descripción: Crea la raiz del arbol binario.
+
+<>
+public boolean root(Object object,int ref){
+    try{
+        root = subBinTree(null ,object, null,ref);
+        return true;
+    } catch(Exception e){
+        e.printStackTrace();
+        return false;
+    }
+}
+</>
+
+Metodo: #insert#
+Devuelve: #Void#
+Recive: #Object object, Node root,int ref#
+
+Descripción: Insertar un elemento al arbol binario.
+
+<>
+public void insert(Object object, Node root,int ref){
+    if(!isEmpty()){
+        if(((int)object) < root.id){
+            if(root.left != null){
+                insert(object, root.left,ref);
+            }
+            else{
+                root.left = subBinTree(null, object, null,ref);
+            }
+        }
+        else if(((int)object) > root.id){
+            if(root.right != null){
+                insert(object, root.right,ref);
+            }
+            else{
+                root.right = subBinTree(null, object, null,ref);
+            }
+        }
+    }
+    else{
+        root(object,ref);
+    }
+}
+</>
+
+Metodo: #searchB#
+Devuelve: #Boolean#
+Recive: #Object object#
+
+Descripción: Busca un elemento al arbol binario.
+
+<>
+public boolean searchB(Object object){
+    return searchB(this.root,object);
+}
+</>
+
+Metodo: #searchB#
+Devuelve: #Boolean#
+Recive: #Node root, Object object#
+
+Descripción: Busca un elemento al arbol binario.
+
+<>
+public boolean searchB(Node root, Object object){
+    if(root == null){
+        return false;
+    }
+    if(root.object == object){
+        return true;
+    }
+    else if(((int)object) < root.id){
+        return searchB(root.left,object);
+    }
+    else{
+        return searchB(root.right,object);
+    }
+}
+</>
+
+Metodo: #searchO#
+Devuelve: #Object#
+Recive: #Object object#
+
+Descripción: Busca un elemento al arbol binario.
+
+<>
+public Object searchO(Object object){
+    return searchO(this.root,object);
+}
+</>
+
+Metodo: #searchO#
+Devuelve: #Object#
+Recive: #Node root, Object object#
+
+Descripción: Busca un elemento al arbol binario.
+
+<>
+public Object searchO(Node root, Object object){
+    if(root == null){
+        return null;
+    }
+    if(root.object == object){
+        return (root.object instanceof Node) ? ((Node) root.object).object.toString(): root.object.toString();
+    }
+    else if(((int)object) < root.id){
+        return searchB(root.left,object);
+    }
+    else{
+        return searchB(root.right,object);
+    }
+}
+</>
+
+Metodo: #preOrder#
+Devuelve: #String#
+Recive: #Node root#
+
+Descripción: Imprime el arbol binario en forma Pre-Order.
+
+<>
+public String preOrder(Node root){
+    String obj = "";
+    obj = (root.object instanceof Node) ? ((Node) root.object).object.toString(): root.object.toString() + " ";
+    obj = obj + ((root.left != null) ? preOrder(root.left) : "");
+    obj = obj + ((root.right != null) ? preOrder(root.right) : "");
+    return obj;
+}
+</>
+
+Metodo: #inOrder#
+Devuelve: #Void#
+Recive: #Node root#
+
+Descripción: Imprime el arbol binario en forma In-Order.
+
+<>
+public void inOrder(Node root){
+    if (root != null)
+    {    
+        inOrder (root.left);
+        System.out.print(root.id + " ");
+        inOrder (root.right);
+    }
+}
+</>
+
+Metodo: #posOrder#
+Devuelve: #Void#
+Recive: #Node root#
+
+Descripción: Imprime el arbol binario en forma Pos-Order.
+
+<>
+public void posOrder(Node root){
+    if (root != null)
+    {    
+        posOrder (root.left);
+        posOrder (root.right);
+        System.out.print(root.id + " ");
+    }
+}
+</>
+
+Metodo: #remove#
+Devuelve: #Node#
+Recive: #Object object, Node root#
+
+Descripción: Elimina un elemento del arbol binario.
+
+<>
+public Node remove(Object object, Node root) {
+    Node response = root;
+    if (((int)object) < root.id) {
+        root.left = remove(object,root.left);  
+    } 
+    else if (((int)object) > root.id) {
+        root.right = remove(object,root.right); 
+    } 
+    else {
+        //dos hijos - hojas
+        if (root.left != null && root.right != null) {
+            Node temp = root;
+            doshijos(root, temp);
+        } 
+        //un hijo - hoja
+        else if (root.left != null) {
+            response = root.left;
+        } 
+        else if (root.right != null) {
+            response = root.right;
+        } 
+        //ningun hijo - hoja
+        else {
+            response = null;
+        }
+    }
+    return response;
+}
+</>
+
+Metodo: #doshijos#
+Devuelve: #Void#
+Recive: #Node padre, Node temp#
+
+Descripción: Elimina un elemento del arbol binario que tenga dos hijos.
+
+<>
+private void doshijos(Node padre, Node temp) {
+    Node nodo = reemplazoderecho(temp);
+    if (temp == root) {
+        root = nodo;
+    }else{
+        if (temp.left != null) {
+            padre.left = nodo;
+        }else{
+            padre.right = nodo;
+        }
+    }nodo.left = temp.left;
+}
+</>
+
+Metodo: #reemplazoderecho#
+Devuelve: #Node#
+Recive: #Node temp#
+
+Descripción: Remplaza nodo derecho, se usa para el metodo doshijos.
+
+<>
+private Node reemplazoderecho(Node temp) {
+    Node padre = temp;
+    Node auxiliar =temp.right;
+    Node ramplazo = temp;
+    while (auxiliar !=null){
+        padre = ramplazo;
+        ramplazo = auxiliar;
+        auxiliar = auxiliar.left;
+    }if (ramplazo!= temp.right) {
+        padre.left = ramplazo.right;
+        ramplazo.right = temp.right;
+    }
+    return ramplazo;
+}
+</>
+
+Metodo: #toString#
+Devuelve: #String#
+Recive: #Void#
+
+Descripción: Imprime el arbol binario.
+
+<>
+@Override
+public String toString(){
+    return "BinTree{" +
+    "root = " + root +
+    "}";
+}
+</>
+
+
+
+
+

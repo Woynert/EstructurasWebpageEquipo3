@@ -1,2 +1,239 @@
-Si es un array es fijo no se puede ajustar su tamaño a la mitad de la ejecución de un programa, esto se puede solucionar creando un array dinámico, crear un array lo suficientemente grande para almacenar los datos, pero esto deriva en un desperdicio de memoria totalmente innecesario o también se puede crear un nuevo array, doblar el tamaño de éste cada vez que se necesite crecer y copiar los datos del array anterior al nuevo array
+Ahora se mostrara un ejemplo para la estructura de lista circular sencilla, como antes se definira primero el nodo.
+
+#Nodo#
+
+<>
+class Node:
+    def __init__(self, data):
+        self.item = data
+        self.nref = None
+        self.pref = None
+</>
+
+Despues creamos la clase DoublyLinkedList para agregar los metodos
+
+<>
+class DoublyLinkedList:
+    def __init__(self):
+        self.start_node = None
+</>
+
+Los metodos serian los siguientes:
+
+Metodo: #insertHead#
+Devuelve: #Void#
+Recive: #self, Elemento para insertar#
+
+Descripción: Agrega un elemento a la cabeza de la lista.
+
+<>
+    def insertHead(self, data):
+        if self.start_node is None:
+            new_node = Node(data)
+            self.start_node = new_node
+            print("Insertado")
+            return
+        new_node = Node(data)
+        new_node.nref = self.start_node
+        self.start_node.pref = new_node
+        self.start_node = new_node
+</>
+
+Metodo: #insertTail#
+Devuelve: #Void#
+Recive: #self, Elemento para insertar#
+
+Descripción: Agrega un elemento a la cola de la lista.
+
+
+<>
+    def insertTail(self, data):
+        if self.start_node is None:
+            new_node = Node(data)
+            self.start_node = new_node
+            return
+        n = self.start_node
+        while n.nref is not None:
+            n = n.nref
+        new_node = Node(data)
+        n.nref = new_node
+        new_node.pref = n
+</>
+
+Metodo: #insertAfter#
+Devuelve: #Void#
+Recive: #self, Elemento para insertar#
+
+Descripción: Agrega un elemento despues de otro.
+
+<>
+    def insertAfter(self, x, data):
+        if self.start_node is None:
+            print("Lista vacia")
+            return
+        else:
+            n = self.start_node
+            while n is not None:
+                if n.item == x:
+                    break
+                n = n.nref
+            if n is None:
+                print("No esta en la lista")
+            else:
+                new_node = Node(data)
+                new_node.pref = n
+                new_node.nref = n.nref
+                if n.nref is not None:
+                    n.nref.prev = new_node
+                n.nref = new_node
+</>
+
+Metodo: #insertBefore#
+Devuelve: #Void#
+Recive: #self, Elemento para insertar#
+
+Descripción: Agrega un elemento antes de otro.
+
+<>
+    def insertBefore(self, x, data):
+        if self.start_node is None:
+            print("Lista vacia")
+            return
+        else:
+            n = self.start_node
+            while n is not None:
+                if n.item == x:
+                    break
+                n = n.nref
+            if n is None:
+                print("No esta en la lista")
+            else:
+                new_node = Node(data)
+                new_node.nref = n
+                new_node.pref = n.pref
+                if n.pref is not None:
+                    n.pref.nref = new_node
+                n.pref = new_node
+</>
+
+Metodo: #toString#
+Devuelve: #Void#
+Recive: #self#
+
+Descripción: Imprime la lista circular.
+
+<>
+    def toString(self):
+        if self.start_node is None:
+            print("Lista vacia")
+            return
+        else:
+            n = self.start_node
+            while n is not None:
+                print(n.item , " ")
+                n = n.nref
+</>
+
+Metodo: #removeHead#
+Devuelve: #Void#
+Recive: #self#
+
+Descripción: Elimina la cabeza de la lista.
+
+<>
+    def removeHead(self):
+        if self.start_node is None:
+            print("Lista vacia")
+            return 
+        if self.start_node.nref is None:
+            self.start_node = None
+            return
+        self.start_node = self.start_node.nref
+        self.start_prev = None
+</>
+
+Metodo: #removeTail#
+Devuelve: #Void#
+Recive: #self#
+
+Descripción: Elimina la cola de la lista.
+
+<>
+    def removeTail(self):
+        if self.start_node is None:
+            print("Lista vacia")
+            return 
+        if self.start_node.nref is None:
+            self.start_node = None
+            return
+        n = self.start_node
+        while n.nref is not None:
+            n = n.nref
+        n.pref.nref = None
+</>
+
+Metodo: #removeObj#
+Devuelve: #Void#
+Recive: #self, Elemento a eliminar#
+
+Descripción: Elimina un elemento de la lista.
+
+<>
+    def removeObj(self, x):
+        if self.start_node is None:
+            print("Lista vacia")
+            return 
+        if self.start_node.nref is None:
+            if self.start_node.item == x:
+                self.start_node = None
+            else:
+                print("Elemento no encontrado")
+            return 
+
+        if self.start_node.item == x:
+            self.start_node = self.start_node.nref
+            self.start_node.pref = None
+            return
+
+        n = self.start_node
+        while n.nref is not None:
+            if n.item == x:
+                break
+            n = n.nref
+        if n.nref is not None:
+            n.pref.nref = n.nref
+            n.nref.pref = n.pref
+        else:
+            if n.item == x:
+                n.pref.nref = None
+            else:
+                print("Elemento no encontrado")
+</>
+
+Metodo: #reverse#
+Devuelve: #Void#
+Recive: #self#
+
+Descripción: Invierte la lista.
+
+<>
+    def reverse(self):
+        if self.start_node is None:
+            print("Lista vacia")
+            return 
+        p = self.start_node
+        q = p.nref
+        p.nref = None
+        p.pref = q
+        while q is not None:
+            q.pref = q.nref
+            q.nref = p
+            p = q
+            q = q.pref
+        self.start_node = p
+</>
+
+
+
+
 

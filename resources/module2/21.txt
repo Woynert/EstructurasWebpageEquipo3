@@ -1,4 +1,4 @@
-#Primero# creamos la clase, declaramos los atributos top,max, que y cola e introducimos un metodo constructor.
+#Prrrimero# creamos la clase, declaramos los atributos tope,max, que y cola e introducimos un metodo constructor.
 
 <> public class pilaarray{
 
@@ -143,11 +143,31 @@ Descripción: Vacia la pila.
      public void VaciarCola()
      {
           tope = 0;
-          que = 0;
           cola=new Object[max];
      } 
 } 
-
-
-
 </>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

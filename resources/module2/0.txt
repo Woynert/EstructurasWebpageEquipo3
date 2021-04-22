@@ -34,7 +34,7 @@ public class ListNode {
     }
 </>
 
-Function: #toString#
+Metodo: #toString#
 Devuelve: #String#
 Recive: #Void#
 
@@ -97,7 +97,7 @@ public List(Object object) {
 
 A continuación explicaremos los metodos
 
-Function: #isEmpty#
+Metodo: #isEmpty#
 Devuelve: #Boolean#
 Recive: #Void#
 
@@ -109,7 +109,7 @@ public boolean isEmpty() {
 }
 </>
 
-Function: #getSize#
+Metodo: #getSize#
 Devuelve: #int#
 Recive: #Void#
 
@@ -121,7 +121,7 @@ public int getSize() {
 }
 </>
 
-Function: #clear#
+Metodo: #clear#
 Devuelve: #void#
 Recive: #Void#
 
@@ -135,7 +135,7 @@ public void clear() {
 }
 </>
 
-Function: #getHead#
+Metodo: #getHead#
 Devuelve: #Object#
 Recive: #Void#
 
@@ -147,7 +147,7 @@ public Object getHead() {
 }
 </>
 
-Function: #getTail#
+Metodo: #getTail#
 Devuelve: #Object#
 Recive: #Void#
 
@@ -159,7 +159,7 @@ public Object getTail() {
 }
 </>
 
-Function: #search#
+Metodo: #search#
 Devuelve: #ListNode#
 Recive: #Object object#
 
@@ -181,7 +181,7 @@ public ListNode search(Object object) {
 
 
 
-Function: #add#
+Metodo: #add#
 Devuelve: #Boolean#
 Recive: #Object object#
 
@@ -193,7 +193,7 @@ public boolean add(Object object) {
 }
 </>
 
-Function: #insert#
+Metodo: #insert#
 Devuelve: #Boolean#
 Recive: #ListNode node, Object object#
 
@@ -221,7 +221,7 @@ public boolean insert(ListNode node, Object object) {
 }
 </>
 
-Function: #insert#
+Metodo: #insert#
 Devuelve: #Boolean#
 Recive: #Object ob, Object object#
 
@@ -250,7 +250,7 @@ public boolean insert(Object ob, Object object) {
 }
 </>
 
-Function: #insertHead#
+Metodo: #insertHead#
 Devuelve: #Boolean#
 Recive: #Object object#
 
@@ -275,7 +275,7 @@ public boolean insertHead(Object object) {
 }
 </>
 
-Function: #insertTail#
+Metodo: #insertTail#
 Devuelve: #Boolean#
 Recive: #Object object#
 
@@ -301,7 +301,7 @@ public boolean insertTail(Object object) {
 }
 </>
 
-Function: #remove#
+Metodo: #remove#
 Devuelve: #Boolean#
 Recive: #ListNode node#
 
@@ -342,7 +342,7 @@ public boolean remove(ListNode node) {
 }
 </>
 
-Function: #remove#
+Metodo: #remove#
 Devuelve: #Boolean#
 Recive: #Object object#
 
